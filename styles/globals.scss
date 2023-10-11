@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "iranyekan";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/woff/IRANYekanXFaNum-Regular.woff") format("woff"),
+    url("/assets/fonts/ttf/IRANYekanXFaNum-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "iranyekan";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/woff/IRANYekanXFaNum-Medium.woff") format("woff"),
+    url("/assets/fonts/ttf/IRANYekanXFaNum-Medium.ttf") format("truetype");
+}
+
+html,
+body,
+span,
+button,
+div,
+p,
+a {
+  font-family: "iranyekan";
+}
+
+.ant-dropdown-menu {
+  width: 216px;
+  box-shadow: 0 0 0px !important;
+  border-radius: 20px !important;
+  border: 1px solid #c4c8d0;
+  padding: 8px !important;
+  .ant-dropdown-menu-item {
+    border-radius: 32px !important;
+    height: 40px;
+    a {
+      color: #1a1c1f !important;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "@/styles/theme.module.scss";
+
+.wrapper {
+  position: absolute;
+  height: 56px;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #ffffffb2;
+  display: flex;
+  align-items: center;
+  a {
+    color: #44474e;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    &:hover {
+      background-color: transparent;
+      height: auto;
+    }
+  }
+  [class~=".ant-breadcrumb-separator"] {
+    margin: 0 !important;
+  }
+  li {
+    &:last-child {
+      color: $primary;
+    }
+  }
+}

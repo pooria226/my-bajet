@@ -1,0 +1,31 @@
+@import "@/styles/theme.module.scss";
+
+.wrapper {
+  height: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.buttons {
+  background-color: $primary;
+  height: 40px;
+  border-radius: 20px;
+  color: #ffffff !important;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  border: 0;
+  width: 125px;
+}
+
+.wrapperMenu {
+  padding-inline-start: 80px;
+  display: flex;
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapperMenu {
+    padding-inline-start: 60px;
+    display: flex;
+  }
+}

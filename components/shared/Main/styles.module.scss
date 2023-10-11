@@ -1,0 +1,159 @@
+@import "@/styles/theme.module.scss";
+
+.wrapper {
+  background-image: url("/assets/images/png/main.png");
+  width: 100%;
+  max-width: 1440px;
+  height: 518px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  .title {
+    color: #1a1c1f;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 66px;
+  }
+  .text {
+    color: #44474e;
+    line-height: 28px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  .btns {
+    background-color: $primary;
+    width: 256px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .wrapperBook {
+    position: absolute;
+    top: 120px;
+    right: 282px;
+  }
+  .wrapperDollar {
+    position: absolute;
+    bottom: 126px;
+    right: 242px;
+  }
+  .wrapperWhitehouse {
+    position: absolute;
+    top: 81px;
+    left: 233px;
+  }
+  .wrapperCart {
+    position: absolute;
+    bottom: 118px;
+    left: 207px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .wrapper {
+    .wrapperBook {
+      position: absolute;
+      top: 120px;
+      right: 230px;
+    }
+    .wrapperDollar {
+      position: absolute;
+      bottom: 126px;
+      right: 210px;
+    }
+    .wrapperWhitehouse {
+      position: absolute;
+      top: 81px;
+      left: 180px;
+    }
+    .wrapperCart {
+      position: absolute;
+      bottom: 118px;
+      left: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    .wrapperBook {
+      position: absolute;
+      top: 120px;
+      right: 145px;
+      div {
+        width: 90px !important;
+      }
+    }
+    .wrapperDollar {
+      position: absolute;
+      bottom: 126px;
+      right: 120px;
+      div {
+        width: 60px !important;
+      }
+    }
+    .wrapperWhitehouse {
+      position: absolute;
+      top: 81px;
+      left: 120px;
+      div {
+        width: 100px !important;
+      }
+    }
+    .wrapperCart {
+      position: absolute;
+      bottom: 118px;
+      left: 110px;
+      div {
+        width: 60px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    .wrapperBook {
+      position: absolute;
+      top: 120px;
+      right: 80px;
+      div {
+        width: 70px !important;
+      }
+    }
+    .wrapperDollar {
+      position: absolute;
+      bottom: 126px;
+      right: 60px;
+      div {
+        width: 60px !important;
+      }
+    }
+    .wrapperWhitehouse {
+      position: absolute;
+      top: 81px;
+      left: 80px;
+      div {
+        width: 100px !important;
+      }
+    }
+    .wrapperCart {
+      position: absolute;
+      bottom: 118px;
+      left: 60px;
+      div {
+        width: 60px !important;
+      }
+    }
+  }
+}
