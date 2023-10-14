@@ -1,0 +1,35 @@
+.wrapper {
+  background-color: #f4fbef;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .title {
+    color: #1a1c1f;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    padding-bottom: 40px;
+  }
+  .text {
+    color: #1a1c1f;
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+.wrapperColor {
+  margin-top: 32px;
+  border: 1px solid #000000;
+  border-radius: 32px;
+  padding: 16px 16px 16px 24px;
+  .text {
+    color: #1a1c1f;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  .phone {
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+}

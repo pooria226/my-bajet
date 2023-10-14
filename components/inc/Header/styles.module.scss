@@ -22,7 +22,9 @@
   padding-inline-start: 80px;
   display: flex;
 }
-
+.wrapperMobile {
+  height: 64px;
+}
 @media only screen and (max-width: 1200px) {
   .wrapperMenu {
     padding-inline-start: 60px;

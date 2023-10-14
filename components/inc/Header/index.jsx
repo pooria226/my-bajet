@@ -66,6 +66,9 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <div className="md:hidden block">
+          <div className={Styles.wrapperMobile}></div>
+        </div>
       </Wrapper>
     </Container>
   );

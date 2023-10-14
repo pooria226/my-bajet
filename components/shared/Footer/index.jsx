@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Container from "../Container";
 import Wrapper from "../Wrapper";
+import ContactUs from "../ContactUs";
+import Social from "../Social";
 
 import Styles from "./styles.module.scss";
 
 import BazarIcon from "@/public/assets/images/svgs/bazar.svg";
 import MyKetIcon from "@/public/assets/images/svgs/my-ket.svg";
 import BajeetIcon from "@/public/assets/images/svgs/bajeet.svg";
-import ContactUs from "../ContactUs";
-import Social from "../Social";
 
 const Footer = () => {
   return (
