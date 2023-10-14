@@ -7,9 +7,6 @@ import ImageProvider from "@/provider/ImageProvider";
 import CloudDownload from "@/public/assets/images/svgs/cloud-download.svg";
 import VerifiedUser from "@/public/assets/images/svgs/verified-user.svg";
 import BoltIcon from "@/public/assets/images/svgs/bolt.svg";
-import BazarIcon from "@/public/assets/images/svgs/bazar.svg";
-import MyKetIcon from "@/public/assets/images/svgs/my-ket.svg";
-import BajeetIcon from "@/public/assets/images/svgs/bajeet.svg";
 
 import Styles from "./styles.module.scss";
 import Wrapper from "../shared/Wrapper";
@@ -20,7 +17,7 @@ const Services = () => {
       <Wrapper>
         <div className={Styles.wrapper}>
           <div className="grid grid-cols-12">
-            <div className="col-span-6 flex flex-col justify-center items-end ">
+            <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end ">
               <div className={Styles.paddingContainerEnd}>
                 <div style={{ maxWidth: 400, width: "100%" }}>
                   <div>
@@ -39,7 +36,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-6">
+            <div className="md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-normal justify-center">
               <ImageProvider
                 classes={"image-res"}
                 width={400}
@@ -53,16 +50,19 @@ const Services = () => {
       <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
         <Wrapper>
           <div className="grid grid-cols-12">
-            <div className="col-span-6 flex justify-end ">
-              <div className={Styles.paddingContainerEnd}>
+            <div className="md:col-span-6 md:pt-0 pt-10 md:order-0 order-1 col-span-12 flex justify-end">
+              <div
+                className={`${Styles.paddingContainerEnd} w-full flex md:justify-end justify-center`}
+              >
                 <ImageProvider
+                  classes={"image-res"}
                   width={400}
                   aspectRatio={400 / 400}
                   src={"/assets/images/svgs/banking.svg"}
                 />
               </div>
             </div>
-            <div className="col-span-6 flex flex-col justify-center items-start">
+            <div className="md:col-span-6  col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
               <div style={{ maxWidth: 400, width: "100%" }}>
                 <div>
                   <p className={Styles.title}>خدمات بانکی</p>
@@ -90,10 +90,7 @@ const Services = () => {
       <Wrapper>
         <div className={Styles.wrapper}>
           <div className="grid grid-cols-12">
-            <div
-              style={{ paddingInlineEnd: 80 }}
-              className="col-span-6 flex flex-col justify-center items-end"
-            >
+            <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end">
               <div className={Styles.paddingContainerEnd}>
                 <div style={{ maxWidth: 468, width: "100%" }}>
                   <div>
@@ -109,8 +106,9 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-6">
+            <div className="md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-normal justify-center">
               <ImageProvider
+                classes={"image-res"}
                 width={400}
                 aspectRatio={400 / 400}
                 src={"/assets/images/svgs/payment.svg"}
@@ -122,17 +120,18 @@ const Services = () => {
       <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
         <Wrapper>
           <div className="grid grid-cols-12">
-            <div
-              style={{ paddingInlineEnd: 80 }}
-              className="col-span-6 flex justify-end"
-            >
-              <ImageProvider
-                width={400}
-                aspectRatio={400 / 400}
-                src={"/assets/images/svgs/banking.svg"}
-              />
+            <div className="md:col-span-6 md:order-0 md:mt-0 mt-10 order-1 col-span-12 flex justify-end">
+              <div
+                className={`${Styles.paddingContainerEnd} w-full flex md:justify-end justify-center`}
+              >
+                <ImageProvider
+                  width={400}
+                  aspectRatio={400 / 400}
+                  src={"/assets/images/svgs/facilities.svg"}
+                />
+              </div>
             </div>
-            <div className="col-span-6 flex flex-col justify-center items-start">
+            <div className="md:col-span-6 col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
               <div style={{ maxWidth: 468, width: "100%" }}>
                 <div>
                   <p className={Styles.title}>تسهیلات و اعتبارات</p>
@@ -148,7 +147,9 @@ const Services = () => {
                 </div>
                 <div className="mt-4">
                   <Button className="me-1">تسهیلات اسنوا</Button>
-                  <Button className="ms-1">تسهیلات آسان باجت (تاب)</Button>
+                  <Button className="ms-1 md:mt-0 mt-4">
+                    تسهیلات آسان باجت (تاب)
+                  </Button>
                   <br />
                   <Button className="me-1 mt-4">وام ازدواج</Button>
                   <Button className="ms-1 mt-4">
@@ -170,33 +171,33 @@ const Services = () => {
             <p className={Styles.title}>دانــلود اپلیکیشن باجــت</p>
           </div>
           <div className="grid grid-cols-12 items-center">
-            <div className="lg:col-span-8  col-span-6">
+            <div className="lg:col-span-8 md:col-span-6 col-span-12">
               <div className="flex flex-col gap-4">
-                <div className="flex items-center">
+                <div className="flex md:flex-row flex-col items-center">
                   <div className={Styles.blueCricle}>
                     <CloudDownload />
                   </div>
-                  <div className="ps-2">
+                  <div className="ps-2 md:mt-0 mt-2">
                     <p className={Styles.text}>
                       دانلود و افتتاح حساب آنلاین در کمتر از ده دقیقه
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center">
+                <div className="flex md:flex-row flex-col items-center">
                   <div className={Styles.greenCricle}>
                     <VerifiedUser />
                   </div>
-                  <div className="ps-2">
+                  <div className="ps-2 md:mt-0 mt-2">
                     <p className={Styles.text}>
                       امنیت بیشتر با احراز هویت باجت
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center">
+                <div className="flex md:flex-row flex-col items-center">
                   <div className={Styles.blueCricle}>
                     <BoltIcon />
                   </div>
-                  <div className="ps-2">
+                  <div className="ps-2 md:mt-0 mt-2">
                     <p className={Styles.text}>
                       دریافت تسهیلات به‌صورت آنلاین در کمترین زمان
                     </p>
@@ -204,24 +205,39 @@ const Services = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-4 col-span-6 flex items-center justify-between">
-              <div className="flex flex-col justify-end items-end">
+            <div className="lg:col-span-4 md:col-span-6 col-span-12 flex items-center justify-between md:pt-0 pt-14">
+              <div className="flex flex-col justify-end md:items-end items-center w-full">
                 <div>
-                  <BazarIcon />
+                  <ImageProvider
+                    height={"40px"}
+                    width={135}
+                    aspectRatio={135 / 40}
+                    src={"/assets/images/svgs/bazar.svg"}
+                  />
                 </div>
                 <div className="pt-2">
-                  <MyKetIcon />
+                  <ImageProvider
+                    height={"40px"}
+                    width={135}
+                    aspectRatio={135 / 135}
+                    src={"/assets/images/svgs/my-ket.svg"}
+                  />
                 </div>
                 <div className="pt-2">
-                  <BajeetIcon />
+                  <ImageProvider
+                    width={135}
+                    height={"40px"}
+                    aspectRatio={135 / 40}
+                    src={"/assets/images/svgs/bajeet.svg"}
+                  />
                 </div>
               </div>
-              <div className="lg:ps-14">
+              <div className="md:ps-14 md:block hidden w-full">
                 <ImageProvider
+                  classes={"image-qr"}
                   aspectRatio={192 / 192}
                   src={"/assets/images/svgs/qrcode.svg"}
-                  width={192}
-                  height={192}
+                  width={"100%"}
                 />
               </div>
             </div>

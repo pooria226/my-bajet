@@ -75,3 +75,105 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+.wrapperMobile {
+  margin-top: 16px;
+  [class~="ant-collapse"] {
+    border-radius: 0px !important;
+    border: 0 !important;
+  }
+  [class~="ant-collapse-item"] {
+    border: 0 !important;
+    border-radius: 0px !important;
+  }
+  [class~="ant-collapse-header"] {
+    background-color: white;
+    border-radius: 0px !important;
+    padding: 12px 16px !important;
+  }
+  [class~="ant-collapse-header-text"] {
+    color: #1a1c1f;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  [class~="ant-collapse-content-box"] {
+    padding: 0 !important;
+  }
+  [class~="ant-collapse-content"] {
+    border: 0 !important;
+  }
+  [class~="box"] {
+    height: 48px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    [class~="badge"] {
+      background-color: #ba1a1a;
+      display: inline-block;
+      width: 35px;
+      height: 16px;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 8px !important;
+      line-height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+    [class~="text-acc"] {
+      color: #44474e;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &:hover {
+      background-color: #f0f2f4;
+      [class~="text-acc"] {
+        color: #1a1c1f;
+      }
+    }
+  }
+}
+.textContact {
+  color: #1a1c1f;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+.textAddress {
+  margin-top: 8px;
+  color: #1a1c1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.linkMobile {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seprator {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+.textFooter {
+  color: #44474e;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 16px;
+}

@@ -24,6 +24,17 @@
 }
 .wrapperMobile {
   height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 0 0 0px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .wrapperMenu {

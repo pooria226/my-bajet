@@ -14,8 +14,12 @@ const Home = () => {
       <div>
         <Brands />
       </div>
-      <div>{/* <Services /> */}</div>
-      <div>{/* <Ask /> */}</div>
+      <div>
+        <Services />
+      </div>
+      <div>
+        <Ask />
+      </div>
     </div>
   );
 };

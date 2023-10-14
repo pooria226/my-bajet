@@ -14,6 +14,9 @@
     font-weight: 500;
     font-size: 24px;
   }
+  .paddingEnd {
+    padding-inline-end: 127px;
+  }
 }
 .wrapperColor {
   margin-top: 32px;
@@ -31,5 +34,61 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 31.2px;
+    direction: ltr;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .wrapper {
+    .paddingEnd {
+      padding-inline-end: 32px;
+    }
+    .text {
+      font-size: 18px;
+    }
+  }
+  .wrapperColor {
+    .phone {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    .paddingEnd {
+      padding-inline-end: 40px;
+    }
+    .text {
+      font-size: 20px;
+    }
+  }
+  .wrapperColor {
+    .phone {
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    :global .image-res {
+      max-width: 296px !important;
+      width: 100% !important;
+    }
+    .paddingContainerEnd {
+      padding-inline-end: 0px;
+    }
+    .title {
+      font-size: 32px;
+    }
+  }
+  .wrapperColor {
+    .phone {
+      font-size: 14px;
+    }
+    .text {
+      font-size: 14px;
+    }
   }
 }
