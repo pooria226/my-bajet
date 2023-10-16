@@ -1,12 +1,30 @@
-import ImageProvider from "@/provider/ImageProvider";
+import Image from "next/image";
 
 import Styles from "./styles.module.scss";
-import Image from "next/image";
+import ImageProvider from "@/provider/ImageProvider";
 
 const HeroCart = ({}) => {
   return (
     <div className={Styles.wrapper}>
-      <Image height={553} width={1440} src={"/assets/images/png/cart.png"} />
+      <div className="md:block hidden">
+        <Image
+          alt=""
+          height={553}
+          width={1440}
+          src={"/assets/images/png/cart.png"}
+        />
+      </div>
+      <div className="md:hidden block">
+        <div>
+          <ImageProvider
+            classes={"image-res"}
+            aspectRatio={360 / 574}
+            width={"100%"}
+            height={"574px"}
+            src={"/assets/images/png/cart-mobile.png"}
+          />
+        </div>
+      </div>
       <div className={Styles.footer}>
         <p className={Styles.title}>کارتت همیشه باهاته!</p>
         <p className={Styles.text}>

@@ -28,3 +28,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    background-color: #ffffffcc;
+  }
+  .fixed {
+    position: fixed;
+    top: 64px;
+  }
+}

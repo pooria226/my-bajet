@@ -93,7 +93,6 @@ const Footer = () => {
                               خدمات کارت
                             </Link>
                           </div>
-
                           <div className={Styles.link}>
                             صدور و ضمانت سفته الکترونیک
                             <span className="ms-3"> به زودی </span>

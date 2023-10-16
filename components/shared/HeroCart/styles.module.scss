@@ -70,3 +70,27 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    .footer {
+      position: absolute;
+      bottom: 40px;
+      right: 24px;
+      .title {
+        color: #1a1c1f;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 0px;
+      }
+      .text {
+        color: #44474e;
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 8px;
+        line-height: 28px;
+      }
+    }
+  }
+}

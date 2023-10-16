@@ -1,0 +1,62 @@
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .title {
+    text-align: center;
+    color: #1a1c1f;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .circle {
+      background-color: #e7f48a;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .circleDiactive {
+      background-color: #bfbfbf66;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &::before {
+        content: "به زودی";
+        color: white;
+        background-color: #ba1a1a;
+        border-radius: 16px;
+        width: 39px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 16px;
+        font-size: 8px;
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    p {
+      margin-top: 8px;
+      color: #1a1c1f;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+}

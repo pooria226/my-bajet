@@ -42,14 +42,16 @@ const Header = ({ onOpen, open, onClose }) => {
           <div className={`${Styles.wrapper} ${inputs.classes}`}>
             <div className="flex justify-between">
               <div className="flex items-center">
-                <div className="flex">
-                  <div>
-                    <LogoIcon />
+                <Link href={"/"}>
+                  <div className="flex">
+                    <div>
+                      <LogoIcon />
+                    </div>
+                    <div className="ps-3">
+                      <BajetIcon />
+                    </div>
                   </div>
-                  <div className="ps-3">
-                    <BajetIcon />
-                  </div>
-                </div>
+                </Link>
                 <div className={Styles.wrapperMenu}>
                   <div>
                     <DropdownItem

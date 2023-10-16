@@ -72,6 +72,10 @@
     align-items: center;
   }
 }
+.wrapping {
+  width: 100%;
+  max-width: 400px;
+}
 
 @media only screen and (max-width: 1024px) {
   .wrapper {
@@ -101,5 +105,9 @@
       line-height: 41.6px;
       font-weight: 600;
     }
+  }
+  .wrapping {
+    width: 100%;
+    max-width: 100%;
   }
 }

@@ -1,6 +1,8 @@
 .wrapper {
   margin-top: 80px;
   margin-bottom: 80px;
+  border: 1px solid #e0e4ec;
+  border-radius: 24px;
   .title {
     color: #1a1c1f;
     font-weight: 600;
@@ -19,15 +21,106 @@
     justify-content: center;
     align-items: center;
   }
+  .itemDisabled {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: #bfbfbf66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "به زودی";
+      position: absolute;
+      width: 39px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 16px;
+      font-weight: 500;
+      font-size: 8px;
+      line-height: 16px;
+      background-color: #ba1a1a;
+      top: 0px;
+      right: 15px;
+      color: white;
+    }
+  }
   .text {
     color: #1a1c1f;
     font-weight: 500;
     font-size: 14px;
     line-height: 26px;
     margin-top: 8px;
+    text-align: center;
   }
   :global .swiper-slide {
     display: flex;
     justify-content: center;
+  }
+  [class~="swiper"] {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 300px;
+      height: 212px;
+      background-image: linear-gradient(to right, white, #ffff0000);
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 300px;
+      height: 212px;
+      background-image: linear-gradient(to left, white, #ffff0000);
+      z-index: 2;
+    }
+  }
+  [class~="swiper-wrapper"] {
+    display: flex;
+    align-items: center;
+  }
+  [class~="swiper-slide-active"] {
+    [class~="item-swiper"] {
+      width: 136px;
+      height: 136px;
+    }
+    .text {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    [class~="swiper"] {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 212px;
+        background-image: linear-gradient(to right, white, #ffff0000);
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 212px;
+        background-image: linear-gradient(to left, white, #ffff0000);
+        z-index: 2;
+      }
+    }
   }
 }

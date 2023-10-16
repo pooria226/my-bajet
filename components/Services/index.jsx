@@ -19,7 +19,7 @@ const Services = () => {
           <div className="grid grid-cols-12">
             <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end ">
               <div className={Styles.paddingContainerEnd}>
-                <div style={{ maxWidth: 400, width: "100%" }}>
+                <div className={Styles.wrapping}>
                   <div>
                     <p className={Styles.title}>امضای دیجیتال</p>
                   </div>
@@ -63,7 +63,7 @@ const Services = () => {
               </div>
             </div>
             <div className="md:col-span-6  col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
-              <div style={{ maxWidth: 400, width: "100%" }}>
+              <div className={Styles.wrapping}>
                 <div>
                   <p className={Styles.title}>خدمات بانکی</p>
                 </div>
@@ -75,12 +75,10 @@ const Services = () => {
                     آنلاین انجام می‌شوند.
                   </p>
                 </div>
-                <div className="mt-4">
-                  <Button className="me-1">افتتاح حساب</Button>
-                  <Button className="ms-1">خدمات کارت</Button>
-                  <Button disabled={true} className="mt-4">
-                    سفته الکترونیک (به زودی)
-                  </Button>
+                <div className="mt-4 flex flex-wrap gap-4">
+                  <Button>افتتاح حساب</Button>
+                  <Button>خدمات کارت</Button>
+                  <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
                 </div>
               </div>
             </div>
@@ -92,7 +90,7 @@ const Services = () => {
           <div className="grid grid-cols-12">
             <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end">
               <div className={Styles.paddingContainerEnd}>
-                <div style={{ maxWidth: 468, width: "100%" }}>
+                <div className={Styles.wrapping}>
                   <div>
                     <p className={Styles.title}>خدمات پرداختی</p>
                   </div>
@@ -132,7 +130,7 @@ const Services = () => {
               </div>
             </div>
             <div className="md:col-span-6 col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
-              <div style={{ maxWidth: 468, width: "100%" }}>
+              <div className={Styles.wrapping}>
                 <div>
                   <p className={Styles.title}>تسهیلات و اعتبارات</p>
                 </div>
@@ -145,20 +143,13 @@ const Services = () => {
                     می‌تواند ضامن خود را پیدا کند.
                   </p>
                 </div>
-                <div className="mt-4">
-                  <Button className="me-1">تسهیلات اسنوا</Button>
-                  <Button className="ms-1 md:mt-0 mt-4">
-                    تسهیلات آسان باجت (تاب)
-                  </Button>
-                  <br />
-                  <Button className="me-1 mt-4">وام ازدواج</Button>
-                  <Button className="ms-1 mt-4">
-                    تسهیلات سازمانی (کارنو وام)
-                  </Button>
-                  <Button className="me-1 mt-4">خدمات اعتباری (BNPL)</Button>
-                  <Button disabled={true} className="mt-4 ms-1">
-                    سفته الکترونیک (به زودی)
-                  </Button>
+                <div className="mt-4 flex flex-wrap gap-4">
+                  <Button>تسهیلات اسنوا</Button>
+                  <Button>تسهیلات آسان باجت (تاب)</Button>
+                  <Button>وام ازدواج</Button>
+                  <Button>تسهیلات سازمانی (کارنو وام)</Button>
+                  <Button>خدمات اعتباری (BNPL)</Button>
+                  <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
                 </div>
               </div>
             </div>
