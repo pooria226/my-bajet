@@ -168,7 +168,7 @@ const Services = () => {
       <Wrapper>
         <div className={Styles.wrapperDownload}>
           <div className="flex justify-center">
-            <p className={Styles.title}>دانــلود اپلیکیشن باجــت</p>
+            <p className={Styles.title}>دانلود اپلیکیشن باجت</p>
           </div>
           <div className="grid grid-cols-12 items-center">
             <div className="lg:col-span-8 md:col-span-6 col-span-12">

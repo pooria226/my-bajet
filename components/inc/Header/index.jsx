@@ -4,6 +4,8 @@ import { Button } from "antd";
 import Container from "@/components/shared/Container";
 import DropdownItem from "@/components/shared/Dropdown";
 import Wrapper from "@/components/shared/Wrapper";
+import DrawerItem from "@/components/shared/Drawer";
+import Link from "next/link";
 
 import LogoIcon from "@/public/assets/images/svgs/logo.svg";
 import BajetIcon from "@/public/assets/images/svgs/bajet.svg";
@@ -11,7 +13,6 @@ import MenuIcon from "@/public/assets/images/svgs/menu.svg";
 import BajetTypeIcon from "@/public/assets/images/svgs/bajet-type.svg";
 
 import Styles from "./styles.module.scss";
-import DrawerItem from "@/components/shared/Drawer";
 
 const Header = ({ onOpen, open, onClose }) => {
   const [inputs, setInputs] = useState({
@@ -75,7 +76,7 @@ const Header = ({ onOpen, open, onClose }) => {
                           key: "0",
                         },
                         {
-                          label: <a href="#">خدمات کارت</a>,
+                          label: <Link href="/cart">خدمات کارت</Link>,
                           key: "1",
                         },
                       ]}

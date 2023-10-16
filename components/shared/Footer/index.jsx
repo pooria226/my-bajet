@@ -26,6 +26,7 @@ import SimorqTejartIcon from "@/public/assets/images/svgs/simorq-tejart.svg";
 const Footer = () => {
   const [inputs, setInputs] = useState({
     acc1: [],
+    acc2: [],
   });
   return (
     <Container>
@@ -183,7 +184,7 @@ const Footer = () => {
           <Collapse
             onChange={(e) =>
               setInputs((prev) => {
-                return { ...prev, acc1: e };
+                return { ...prev, acc2: e };
               })
             }
             expandIcon={() => {
@@ -215,20 +216,35 @@ const Footer = () => {
                     </div>
                   </div>
                 ),
-                extra: inputs.acc1.length > 0 ? <MinesIcon /> : <PlusIcon />,
+                extra: inputs.acc2.length > 0 ? <MinesIcon /> : <PlusIcon />,
               },
             ]}
           />
           <div>
             <div className="flex flex-col justify-center items-center py-4">
               <div>
-                <BazarIcon />
+                <ImageProvider
+                  aspectRatio={135 / 40}
+                  src={"/assets/images/svgs/bazar.svg"}
+                  width={135}
+                  height={40}
+                />
               </div>
               <div className="pt-2">
-                <MyKetIcon />
+                <ImageProvider
+                  aspectRatio={135 / 40}
+                  src={"/assets/images/svgs/my-ket.svg"}
+                  width={135}
+                  height={40}
+                />
               </div>
               <div className="pt-2">
-                <BajeetIcon />
+                <ImageProvider
+                  aspectRatio={135 / 40}
+                  src={"/assets/images/svgs/bajeet.svg"}
+                  width={135}
+                  height={40}
+                />
               </div>
             </div>
           </div>
@@ -241,7 +257,10 @@ const Footer = () => {
               خیابان استاد نجات الهی، خیابان اراک، پلاک 48
             </p>
           </div>
-          <div className="py-2 flex justify-between px-16 gap-0 mx-4 mb-4">
+          <div
+            style={{ maxWidth: "328px", width: "100%" }}
+            className="py-2 flex justify-between px-16 gap-0 mx-auto mb-4"
+          >
             <Link className={Styles.linkMobile} href={"#"}>
               <InstagramIcon />
             </Link>
@@ -285,7 +304,7 @@ const Footer = () => {
                 <SimorqTejartIcon />
               </div>
             </div>
-            <div className={Styles.seprator}></div>
+            <div className={Styles.sepratorMobile}></div>
           </div>
           <div className="pb-4 px-4">
             <p className={Styles.textFooter}>

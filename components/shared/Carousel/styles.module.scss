@@ -1,0 +1,33 @@
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  .title {
+    color: #1a1c1f;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+  .item {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: #e7f48a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    color: #1a1c1f;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 8px;
+  }
+  :global .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -164,16 +164,26 @@
   justify-content: center;
   align-items: center;
 }
+
 .seprator {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+
+.sepratorMobile {
   margin-top: 8px;
   margin-bottom: 8px;
   width: 100%;
   height: 1px;
   background-color: #e6e6e6;
 }
+
 .textFooter {
   color: #44474e;
   font-weight: 400;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 16px;
 }

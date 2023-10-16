@@ -1,10 +1,10 @@
 import ImageProvider from "@/provider/ImageProvider";
+import Wrapper from "../Wrapper";
+import Container from "../Container";
 
 import CallIcon from "@/public/assets/images/svgs/call.svg";
 
 import Styles from "./styles.module.scss";
-import Wrapper from "../Wrapper";
-import Container from "../Container";
 
 const Ask = ({}) => {
   return (
@@ -26,7 +26,7 @@ const Ask = ({}) => {
                       </p>
                     </div>
                     <div className={Styles.wrapperColor}>
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center pe-5 ps-3 w-full">
                         <div className="flex items-center">
                           <span className="pe-2">
                             <CallIcon />
@@ -68,7 +68,7 @@ const Ask = ({}) => {
                 </div>
                 <div>
                   <div className={Styles.wrapperColor}>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center pe-5 ps-3 w-full">
                       <div className="flex items-center">
                         <span className="pe-2">
                           <CallIcon />
