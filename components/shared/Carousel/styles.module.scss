@@ -98,6 +98,33 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    [class~="swiper"] {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 212px;
+        background-image: linear-gradient(to right, white, #ffff0000);
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 212px;
+        background-image: linear-gradient(to left, white, #ffff0000);
+        z-index: 2;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .wrapper {
     [class~="swiper"] {

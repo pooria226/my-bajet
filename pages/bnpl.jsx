@@ -1,10 +1,13 @@
-import Header from "@/components/inc/Header";
-import MainLayotus from "@/components/layouts/MainLayouts";
-import Footer from "@/components/shared/Footer";
-import Home from "@/components/shared/Home";
+import Link from "next/link";
 import { useState } from "react";
 
-const Index = () => {
+import Header from "@/components/inc/Header";
+import MainLayotus from "@/components/layouts/MainLayouts";
+import BreadCrumbItem from "@/components/shared/BreadCrumb";
+import Footer from "@/components/shared/Footer";
+import Bnpl from "@/components/shared/Bnpl";
+
+const BnplIndex = () => {
   const [inputs, setInputs] = useState({
     drawer: false,
   });
@@ -25,11 +28,20 @@ const Index = () => {
           }
         />
       }
+      breadCrumb={
+        <BreadCrumbItem
+          items={[
+            { title: <Link href={"/"}>خانه</Link> },
+            { title: <Link href={"#"}>تسهیلات و اعتبارات</Link> },
+            { title: "خدمات اعتباری (BNPL)" },
+          ]}
+        />
+      }
       footer={<Footer />}
     >
-      <Home />
+      <Bnpl />
     </MainLayotus>
   );
 };
 
-export default Index;
+export default BnplIndex;

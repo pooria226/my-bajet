@@ -1,9 +1,9 @@
 import React from "react";
 
 import Brands from "../Brands";
-import Main from "../shared/Main";
+import Main from "../Main";
 import Services from "../Services";
-import Ask from "../shared/Ask";
+import Ask from "../Ask";
 
 const Home = () => {
   return (

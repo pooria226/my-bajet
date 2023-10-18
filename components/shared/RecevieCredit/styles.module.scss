@@ -1,0 +1,89 @@
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f9fafa;
+  .title {
+    color: #1a1c1f;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .innerWrapper {
+    height: 380px;
+    width: 876px;
+    border: 1px solid #74797f;
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    .termsReceipt {
+      background-color: #eff2fa;
+      height: 60px;
+      width: 366px;
+      border-radius: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: #1a1e00;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .personal {
+      background-color: #e5f0ff;
+      height: 60px;
+      width: 223px;
+      border-radius: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: #1a1e00;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .organizational {
+      background-color: #f5feb8;
+      height: 60px;
+      width: 223px;
+      border-radius: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: #1a1e00;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .item {
+      height: 96px;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-inline-start: 32px;
+      padding-inline-end: 32px;
+      p {
+        color: #001b3f;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+    .itemIcon {
+      height: 96px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,11 +1,12 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import Wrapper from "../Wrapper";
 import ImageProvider from "@/provider/ImageProvider";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 import Styles from "./styles.module.scss";
 
 import "swiper/css";
-import { useEffect, useState } from "react";
 
 const Carousel = () => {
   const [swiper, setSwiper] = useState();
@@ -13,7 +14,7 @@ const Carousel = () => {
 
   useEffect(() => {
     if (swiper != null) slideTo();
-  }, [swiper]);
+  }, []);
 
   return (
     <Wrapper>
@@ -23,12 +24,14 @@ const Carousel = () => {
         </div>
         <div style={{ height: 212 }} className="py-4 cursor-grabbing">
           <Swiper
+            modules={[Autoplay]}
             onSwiper={setSwiper}
             spaceBetween={34}
             slidesPerView={7}
             centeredSlides={true}
             roundLengths={true}
-            loop={false}
+            loop={true}
+            autoplay={{ delay: 3000 }}
             breakpoints={{
               1440: {
                 slidesPerView: 7,
@@ -130,7 +133,7 @@ const Carousel = () => {
             {/* diactive */}
             <SwiperSlide>
               <div>
-                <div className={Styles.itemDisabled}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -145,7 +148,113 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={Styles.itemDisabled}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/timelapse.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>فعال سازی رمز پویا</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.item} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/add-card.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>صدور مجدد کارت</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.item} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/lock.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>تغییر رمز اول کارت</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.item} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/credit-card.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>مسدود سازی کارت</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.item} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/credit-score.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>فعال سازی کارت</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.item} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/sync.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>نمایش موجودی</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            {/* diactive */}
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
+                  <ImageProvider
+                    aspectRatio={56 / 56}
+                    width={56}
+                    height={56}
+                    src={"/assets/images/svgs/approval-delegation.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.text}>وضعیت تحویل کارت</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}

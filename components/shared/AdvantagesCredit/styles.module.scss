@@ -1,0 +1,29 @@
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .title {
+    color: #1a1c1f;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .cricle {
+    background-color: #2d5da7;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .text {
+    color: #44474e;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}

@@ -27,7 +27,7 @@ const Cart = ({}) => {
         <Faq />
       </div>
       <div>
-        <Help />
+        <Help text={"پشتیبانی کارت در کنار شماست"} />
       </div>
     </Container>
   );

@@ -45,7 +45,7 @@ const BreadCrumbItem = ({ items = [] }) => {
           <div>
             <Breadcrumb
               separator={
-                <span className="px-3 flex">
+                <span className="px-2 flex">
                   <ChevronLeft />
                 </span>
               }

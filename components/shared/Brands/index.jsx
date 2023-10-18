@@ -1,6 +1,6 @@
 import React from "react";
 
-import Container from "../shared/Container";
+import Container from "../Container";
 import ImageProvider from "@/provider/ImageProvider";
 
 import Styles from "./styles.module.scss";

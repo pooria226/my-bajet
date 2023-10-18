@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "antd";
-import Container from "../shared/Container";
+import Container from "../Container";
 import ImageProvider from "@/provider/ImageProvider";
 
 import CloudDownload from "@/public/assets/images/svgs/cloud-download.svg";
@@ -9,7 +9,7 @@ import VerifiedUser from "@/public/assets/images/svgs/verified-user.svg";
 import BoltIcon from "@/public/assets/images/svgs/bolt.svg";
 
 import Styles from "./styles.module.scss";
-import Wrapper from "../shared/Wrapper";
+import Wrapper from "../Wrapper";
 
 const Services = () => {
   return (
@@ -75,7 +75,7 @@ const Services = () => {
                     آنلاین انجام می‌شوند.
                   </p>
                 </div>
-                <div className="mt-4 flex flex-wrap gap-4">
+                <div className="mt-4 flex flex-wrap  gap-x-2 gap-y-4">
                   <Button>افتتاح حساب</Button>
                   <Button>خدمات کارت</Button>
                   <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
@@ -143,7 +143,7 @@ const Services = () => {
                     می‌تواند ضامن خود را پیدا کند.
                   </p>
                 </div>
-                <div className="mt-4 flex flex-wrap gap-4">
+                <div className="mt-4 flex flex-wrap gap-x-2 gap-y-4">
                   <Button>تسهیلات اسنوا</Button>
                   <Button>تسهیلات آسان باجت (تاب)</Button>
                   <Button>وام ازدواج</Button>

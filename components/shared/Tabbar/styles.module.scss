@@ -1,0 +1,37 @@
+.wrapper {
+  .wrapperButton {
+    display: flex;
+    button {
+      &:nth-child(1) {
+        border: 1px solid #74797f !important;
+        border-radius: 0px 100px 100px 0px;
+        width: 50%;
+        height: 40px;
+        color: #1a1c1f !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &:nth-child(2) {
+        border: 1px solid #74797f !important;
+        border-radius: 100px 0px 0px 100px;
+        width: 50%;
+        height: 40px;
+        color: #1a1c1f !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        border-right: 0 !important;
+      }
+    }
+    .activeBtn {
+      background-color: #e7f48a !important;
+    }
+  }
+  .body {
+    color: #44474e;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+  }
+}

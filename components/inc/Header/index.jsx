@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "antd";
+import Link from "next/link";
 
 import Container from "@/components/shared/Container";
 import DropdownItem from "@/components/shared/Dropdown";
 import Wrapper from "@/components/shared/Wrapper";
 import DrawerItem from "@/components/shared/Drawer";
-import Link from "next/link";
 
 import LogoIcon from "@/public/assets/images/svgs/logo.svg";
 import BajetIcon from "@/public/assets/images/svgs/bajet.svg";
@@ -63,7 +63,7 @@ const Header = ({ onOpen, open, onClose }) => {
                           key: "0",
                         },
                         {
-                          label: <a href="#">خدمات اعتباری (BNPL)</a>,
+                          label: <Link href="/bnpl">خدمات اعتباری (BNPL)</Link>,
                           key: "1",
                         },
                       ]}

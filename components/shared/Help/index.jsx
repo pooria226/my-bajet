@@ -3,7 +3,7 @@ import Wrapper from "../Wrapper";
 
 import Stlyes from "./styles.module.scss";
 
-const Help = () => {
+const Help = ({ text }) => {
   return (
     <Wrapper>
       <div className="py-10">
@@ -12,7 +12,7 @@ const Help = () => {
             <div className="flex justify-between items-center pe-10 ps-14">
               <div>
                 <p className={Stlyes.title}>نیاز به کمک داری؟</p>
-                <p className={Stlyes.subTitle}>پشتیبانی کارت در کنار شماست</p>
+                <p className={Stlyes.subTitle}>{text}</p>
               </div>
               <div className="flex items-center">
                 <div>
@@ -36,7 +36,7 @@ const Help = () => {
             <div className="flex justify-between pt-4 ps-8 pe-4">
               <div>
                 <p className={Stlyes.title}>نیاز به کمک داری؟</p>
-                <p className={Stlyes.subTitle}>پشتیبانی کارت در کنار شماست</p>
+                <p className={Stlyes.subTitle}>{text}</p>
               </div>
               <div>
                 <ImageProvider
