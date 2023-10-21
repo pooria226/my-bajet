@@ -10,8 +10,8 @@ const AdvantagesCredit = ({}) => {
       <div>
         <p className={Styles.title}>مزایای استفاده از اعتبار باجت</p>
       </div>
-      <div className="grid grid-cols-12 pt-10">
-        <div className="col-span-4">
+      <div className="grid grid-cols-12 pt-10 md:gap-y-0 gap-8">
+        <div className="md:col-span-4 col-span-12">
           <div className="flex justify-center flex-col items-center">
             <div className={Styles.cricle}>
               <ShoppingCartIcon />
@@ -24,7 +24,7 @@ const AdvantagesCredit = ({}) => {
             </div>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="md:col-span-4 col-span-12">
           <div className="flex justify-center flex-col items-center">
             <div className={Styles.cricle}>
               <ReceitLongIcon />
@@ -37,7 +37,7 @@ const AdvantagesCredit = ({}) => {
             </div>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="md:col-span-4 col-span-12">
           <div className="flex justify-center flex-col items-center">
             <div className={Styles.cricle}>
               <RedeemIcon />

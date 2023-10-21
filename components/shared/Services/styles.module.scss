@@ -74,13 +74,13 @@
 }
 .wrapping {
   width: 100%;
-  max-width: 400px;
+  max-width: 440px;
 }
 
 @media only screen and (max-width: 1024px) {
   .wrapper {
     :global .image-res {
-      max-width: 400px !important;
+      max-width: 440px !important;
       width: 100% !important;
     }
     .paddingContainerEnd {

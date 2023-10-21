@@ -64,3 +64,35 @@
     line-height: 32px;
   }
 }
+.wrapping {
+  max-width: 400px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapping {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wrapper {
+    [class~="images-responcive"] {
+      width: 296px !important;
+      height: 296px !important;
+    }
+
+    .stepTitle {
+      text-align: center;
+    }
+    .stepSubTitle {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .btnDownload {
+      width: 100%;
+    }
+    .course {
+      width: 100%;
+    }
+  }
+}

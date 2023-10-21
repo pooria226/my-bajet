@@ -30,7 +30,7 @@ const Tabbar = ({ data = [], activeTab, onChange }) => {
           })}
         </div>
       </div>
-      <div className="pt-6">
+      <div className="md:pt-6 pt-4">
         {data.map((item, index) => {
           if (item.tab == activeTab) {
             return item.footer;

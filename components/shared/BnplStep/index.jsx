@@ -19,22 +19,23 @@ const BnplStep = () => {
   return (
     <div className={Styles.wrapper}>
       <Wrapper>
-        <div>
+        <div className="md:pb-0 pb-4">
           <p className={Styles.title}>نحوه دریافت اعتبار باجت</p>
         </div>
         <div className="grid grid-cols-12 gap-y-10">
           <div className="col-span-12">
-            <div className="grid grid-cols-12 gap-20 items-center">
-              <div className="col-span-6 flex justify-end">
+            <div className="grid grid-cols-12 lg:gap-20 md:gap-5 gap-0 items-center">
+              <div className="md:col-span-6 col-span-12 order-0 order-1 md:pt-0 pt-10 md:pb-0 pb-10 flex md:justify-end justify-center">
                 <ImageProvider
-                  src={"/assets/images/png/bnpl-step-1.png"}
+                  src={"/assets/images/svgs/bnpl-step-1.svg"}
                   width={400}
                   aspectRatio={400 / 400}
                   height={"400px"}
+                  classes={"images-responcive"}
                 />
               </div>
-              <div className="col-span-6">
-                <div style={{ width: "100%", maxWidth: 400 }}>
+              <div className="md:col-span-6 md:order-1 order-0 col-span-12">
+                <div className={Styles.wrapping}>
                   <p className={Styles.stepTitle}>مرحله اول</p>
                   <p className={Styles.stepSubTitle}>تعریف و تخصیص اعتبار</p>
                   <div>
@@ -45,9 +46,9 @@ const BnplStep = () => {
                         {
                           tab: 1,
                           title: "شخصی",
-                          body: "بر اساس بررسی رتبه اعتبارسنجی بانکی و میانگین موجودی ماه گذشته حساب تجارت شما، اعتباری تا سقف 50 و 100 میلیون ریال به شما تخصیص داده خواهد شد. با امضای قرارداد در اپلیکیشن باجت، امکان دریافت اعتبار را خواهید داشت.",
+                          body: "با بررسی رتبه اعتبارسنجی بانکی و میانگین موجودی حساب تجارتی شما، اعتباری تا سقف 50 و یا 100 میلیون ریال به شما تخصیص داده خواهد شد. با امضای قرارداد در اپلیکیشن باجت، امکان دریافت اعتبار را خواهید داشت.",
                           footer: (
-                            <div className="flex justify-between items-center gap-2">
+                            <div className="flex md:flex-row flex-col justify-between items-center gap-2">
                               <Button className={Styles.btnDownload}>
                                 <ImageProvider
                                   src={"/assets/images/svgs/logo.svg"}
@@ -95,20 +96,20 @@ const BnplStep = () => {
             </div>
           </div>
           <div className="col-span-12">
-            <div className="grid grid-cols-12 gap-20 items-center">
-              <div className="col-span-6 flex justify-end">
-                <div style={{ width: "100%", maxWidth: 400 }}>
+            <div className="grid grid-cols-12 lg:gap-20 md:gap-5 gap-0 items-center">
+              <div className="md:col-span-6 col-span-12 flex justify-end">
+                <div className={Styles.wrapping}>
                   <p className={Styles.stepTitle}>مرحله دوم</p>
                   <p className={Styles.stepSubTitle}>خرید اعتباری</p>
                   <div>
                     <div>
                       <p className={Styles.textItem}>
-                        با ورود به فروشگاه‌های طرف قرارداد ما، می‌توانید فقط با
+                        با انتخاب فروشگاه‌های طرف قرارداد ما می‌توانید فقط با
                         ورود شماره موبایلی که در باجت ثبت نام کرده‌اید، خرید
                         کنید.
                       </p>
                     </div>
-                    <div className="pt-5">
+                    <div className="md:pt-5 pt-4">
                       <div className="flex justify-between items-center gap-2">
                         <Button className={Styles.btnDownload}>
                           <p>صفحه فروشگاه‌ها</p>
@@ -127,10 +128,11 @@ const BnplStep = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-6 flex justify-start">
+              <div className="md:col-span-6 col-span-12 flex md:justify-start justify-center md:pt-0 pt-10 md:pb-0 pb-10">
                 <div>
                   <ImageProvider
-                    src={"/assets/images/png/bnpl-step-2.png"}
+                    classes={"images-responcive"}
+                    src={"/assets/images/svgs/bnpl-step-2.svg"}
                     width={"100%"}
                     aspectRatio={400 / 400}
                     height={"400px"}
@@ -140,33 +142,33 @@ const BnplStep = () => {
             </div>
           </div>
           <div className="col-span-12">
-            <div className="grid grid-cols-12 gap-20 items-center">
-              <div className="col-span-6 flex justify-end">
+            <div className="grid grid-cols-12 lg:gap-20 md:gap-5 gap-0 items-center">
+              <div className="md:col-span-6 col-span-12 md:order-0 order-1 flex md:justify-end justify-center md:pt-0 pt-10">
                 <div>
                   <ImageProvider
-                    src={"/assets/images/png/bnpl-step-2.png"}
+                    classes={"images-responcive"}
+                    src={"/assets/images/svgs/bnpl-step-3.svg"}
                     width={"100%"}
                     aspectRatio={400 / 400}
                     height={"400px"}
                   />
                 </div>
               </div>
-              <div className="col-span-6 flex justify-start">
-                <div style={{ width: "100%", maxWidth: 400 }}>
+              <div className="md:col-span-6 col-span-12  md:order-1 order-0 flex justify-start">
+                <div className={Styles.wrapping}>
                   <p className={Styles.stepTitle}>مرحله سوم</p>
                   <p className={Styles.stepSubTitle}>پرداخت بدهی اعتباری</p>
                   <div>
                     <div>
                       <p className={Styles.textItem}>
-                        پس از ورود به ویجت خرید اعتباری می‌توانید از قسمت
-                        بازپرداخت برای پرداخت صورت‌حساب خود تا انتهای ماه جاری
-                        اقدام کنید. برای پرداخت بدهی، 5 روز زمان تنفس دارید و پس
-                        از آن، اعتبار شما به عقد تسهیلاتی تبدیل می‌شود. در هر
-                        ماه در صورت تسویه تا انتهای روز پنجم، اعتبار شما برای
-                        ماه بعد مجدد شارژ خواهد شد.
+                        با ورود به ویجت خرید اعتباری می‌توانید از قسمت بازپرداخت
+                        برای پرداخت صورت‌حساب خود تا انتهای ماه جاری اقدام کنید.
+                        برای پرداخت بدهی، 5 روز زمان تنفس دارید. در صورت تسویه
+                        تا انتهای روز پنجم هر ماه، اعتبار شما برای ماه بعد مجدد
+                        شارژ خواهد شد.
                       </p>
                     </div>
-                    <div className="pt-5">
+                    <div className="md:pt-5 pt-4">
                       <div className="flex justify-end">
                         <Button className={Styles.course}>
                           <ImageProvider

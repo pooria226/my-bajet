@@ -71,12 +71,10 @@
       align-items: center;
       padding-inline-start: 32px;
       padding-inline-end: 32px;
-      p {
-        color: #001b3f;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 28px;
-      }
+      color: #001b3f;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
     }
     .itemIcon {
       height: 96px;
@@ -85,5 +83,158 @@
       justify-content: center;
       align-items: center;
     }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #f9fafa;
+    .innerWrapper {
+      height: 380px;
+      width: 100%;
+      border: 1px solid #74797f;
+      border-radius: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 16px;
+      .termsReceipt {
+        background-color: #eff2fa;
+        height: 60px;
+        width: 100%;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .personal {
+        background-color: #e5f0ff;
+        height: 60px;
+        width: 160px;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .organizational {
+        background-color: #f5feb8;
+        height: 60px;
+        width: 160px;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #f9fafa;
+    .title {
+      color: #1a1c1f;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .innerWrapper {
+      height: auto;
+      width: calc(100% - 32px);
+      border: 1px solid #74797f;
+      border-radius: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 16px;
+      .termsReceipt {
+        background-color: #eff2fa;
+        height: 60px;
+        width: 100%;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .personal {
+        background-color: #e5f0ff;
+        height: 60px;
+        width: 100%;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          text-align: center;
+        }
+      }
+      .organizational {
+        background-color: #f5feb8;
+        height: 60px;
+        width: 100%;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: #1a1e00;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          text-align: center;
+        }
+      }
+      .item {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline-start: 32px;
+        padding-inline-end: 32px;
+        text-align: center;
+        color: #001b3f;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+      }
+    }
+  }
+  .seprator {
+    background-color: #c4c8d0;
+    width: 100%;
+    height: 1px;
+    margin-top: 8px;
   }
 }
