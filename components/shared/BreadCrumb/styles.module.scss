@@ -34,6 +34,11 @@
   }
 }
 
+.fixed {
+  position: fixed;
+  top: 80px;
+}
+
 @media only screen and (max-width: 768px) {
   .wrapper {
     background-color: #ffffffcc;

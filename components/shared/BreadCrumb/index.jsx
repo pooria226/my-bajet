@@ -11,13 +11,13 @@ const BreadCrumbItem = ({ items = [] }) => {
   const [inputs, setInputs] = useState({
     fixed: "",
   });
+
   var lastScrollTop = 0;
   useEffect(() => {
     if (window != undefined) {
       document.addEventListener("scroll", (e) => {
         var st = window.screenY || document.documentElement.scrollTop;
         if (st > lastScrollTop) {
-          // downscroll code
           setInputs((prev) => {
             return { ...prev, fixed: false };
           });

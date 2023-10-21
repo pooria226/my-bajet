@@ -12,7 +12,7 @@ const Bnpl = () => {
       <div>
         <HeroBnpl />
       </div>
-      <div>
+      {/* <div>
         <RecevieCredit />
       </div>
       <div>
@@ -26,7 +26,7 @@ const Bnpl = () => {
       </div>
       <div>
         <Help text="پشتیبانی BNPL در کنار شماست" />
-      </div>
+      </div> */}
     </Container>
   );
 };
