@@ -24,9 +24,15 @@ span,
 button,
 div,
 p,
-a {
-  font-family: "iranyekan";
+a,
+input,
+*,
+::before,
+::after,
+::placeholder {
+  font-family: "iranyekan" !important;
 }
+
 .ant-dropdown {
   z-index: 99999999999999999999;
 }
@@ -102,7 +108,7 @@ a {
   background-color: white;
   left: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 99;
   margin-left: auto;
   margin-right: auto;
   transition: 0.2s;

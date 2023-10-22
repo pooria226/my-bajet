@@ -69,6 +69,15 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    [class~="images-responcive"] {
+      width: 360px !important;
+      height: 360px !important;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .wrapping {
     max-width: 100%;

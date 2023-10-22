@@ -21,12 +21,12 @@ const Bnpl = () => {
       <div>
         <BnplStep />
       </div>
-       <div>
+      <div>
         <Faq />
       </div>
       <div>
         <Help text="پشتیبانی BNPL در کنار شماست" />
-      </div> 
+      </div>
     </Container>
   );
 };

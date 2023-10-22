@@ -39,7 +39,7 @@ const DrawerItem = ({ onClose, open }) => {
           </div>
         </Link>
         <div className={Styles.wrapperCollapse}>
-          <div>
+          <div className={router.route == "/bnpl" ? Styles.activate : ""}>
             <Collapse
               expandIcon={() => {
                 return <span></span>;
@@ -54,9 +54,18 @@ const DrawerItem = ({ onClose, open }) => {
                       <div className={Styles.item}>
                         <p>وام ازدواج</p>
                       </div>
-                      <div className={Styles.item}>
-                        <p>خدمات اعتباری (BNPL)</p>
-                      </div>
+
+                      <Link href={"/bnpl"}>
+                        <div
+                          className={
+                            router.route == "/bnpl"
+                              ? Styles.itemActive
+                              : Styles.item
+                          }
+                        >
+                          <p>خدمات اعتباری (BNPL)</p>
+                        </div>
+                      </Link>
                     </div>
                   ),
                   extra: (

@@ -3,8 +3,11 @@ import Image from "next/image";
 import Styles from "./styles.module.scss";
 import ImageProvider from "@/provider/ImageProvider";
 import { Button } from "antd";
+import { useRouter } from "next/router";
 
 const HeroBnpl = ({}) => {
+  const router = useRouter();
+
   return (
     <div className={Styles.wrapper}>
       <div className="md:block hidden">
@@ -56,7 +59,12 @@ const HeroBnpl = ({}) => {
           <Button className={`${Styles.credit} md:order-0 order-1`}>
             دریافت اعتبار از باجت
           </Button>
-          <Button className={Styles.viewStore}>مشاهده صفحه فروشگاه‌ها</Button>
+          <Button
+            onClick={() => router.push("/store")}
+            className={`${Styles.viewStore} md:order-1 order-0`}
+          >
+            مشاهده صفحه فروشگاه‌ها
+          </Button>
         </div>
       </div>
     </div>

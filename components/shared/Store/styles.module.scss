@@ -1,0 +1,31 @@
+.wrapper {
+  background-color: #f9fafa;
+  padding-top: 56px;
+  padding-bottom: 48px;
+  .wrapperStore {
+    .storeTitle {
+      color: #1a1c1f;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+    }
+    .storeText {
+      color: #1a1c1f;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .wrapperFilter {
+  }
+  .btnMore {
+    border: 1px solid #74797f !important;
+    border-radius: 20px;
+    height: 40px;
+    width: 100%;
+    color: #2d5da7 !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
