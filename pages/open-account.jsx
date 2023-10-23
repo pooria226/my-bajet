@@ -5,9 +5,9 @@ import Header from "@/components/inc/Header";
 import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Footer from "@/components/shared/Footer";
-import Store from "@/components/shared/Store";
+import OpenAccount from "@/components/shared/OpenAccount";
 
-const StoreIndex = () => {
+const OpenAccountIndex = () => {
   const [inputs, setInputs] = useState({
     drawer: false,
   });
@@ -32,17 +32,16 @@ const StoreIndex = () => {
         <BreadCrumbItem
           items={[
             { title: <Link href={"/"}>خانه</Link> },
-            { title: <Link href={"#"}>...</Link> },
-            { title: <Link href={"/bnpl"}>خدمات اعتباری (BNPL)</Link> },
-            { title: "فروشگاه‌ها" },
+            { title: <Link href={"#"}>خدمات بانکی</Link> },
+            { title: "افتتاح حساب" },
           ]}
         />
       }
       footer={<Footer />}
     >
-      <Store />
+      <OpenAccount />
     </MainLayotus>
   );
 };
 
-export default StoreIndex;
+export default OpenAccountIndex;

@@ -89,9 +89,17 @@ const DrawerItem = ({ onClose, open }) => {
                   label: "خدمات بانکی",
                   children: (
                     <div>
-                      <div className={Styles.item}>
-                        <p>افتتاح حساب</p>
-                      </div>
+                      <Link href={"/cart"}>
+                        <div
+                          className={
+                            router.route == "/open-account"
+                              ? Styles.itemActive
+                              : Styles.item
+                          }
+                        >
+                          <p>افتتاح حساب</p>
+                        </div>
+                      </Link>
                       <Link href={"/cart"}>
                         <div
                           className={

@@ -1,0 +1,107 @@
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #f9fafa;
+  .title {
+    color: #1a1c1f;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .stepTitle {
+    color: #2d5da7;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.8px;
+    margin-bottom: 8px;
+  }
+  .stepSubTitle {
+    color: #44474e;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 39.08px;
+    margin-bottom: 24px;
+  }
+  .btnDownload {
+    border: 1px solid #74797f !important;
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+    p {
+      color: #2d5da7 !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .course {
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 50%;
+    background-color: #2d5da7;
+    border: 0;
+    p {
+      color: white !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .textItem {
+    color: #44474e;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+.wrapping {
+  max-width: 400px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    [class~="images-responcive"] {
+      width: 360px !important;
+      height: 360px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapping {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wrapper {
+    [class~="images-responcive"] {
+      width: 296px !important;
+      height: 296px !important;
+    }
+
+    .stepTitle {
+      text-align: center;
+    }
+    .stepSubTitle {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .btnDownload {
+      width: 100%;
+    }
+    .course {
+      width: 100%;
+    }
+  }
+}

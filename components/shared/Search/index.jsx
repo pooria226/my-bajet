@@ -7,8 +7,9 @@ import SearchIcon from "@/public/assets/images/svgs/search.svg";
 const Search = () => {
   return (
     <div className={Styles.wrapper}>
-      <Form.Item className="mb-0">
+      <Form.Item className="mb-0 w-full">
         <Input
+          className="w-full"
           placeholder="اسم فروشگاه را جستجو کنید"
           prefix={
             <span>
