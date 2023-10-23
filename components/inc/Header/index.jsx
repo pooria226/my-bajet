@@ -74,7 +74,7 @@ const Header = ({ onOpen, open, onClose }) => {
                       text={"خدمات بانکی"}
                       items={[
                         {
-                          label: <a href="#">افتتاح حساب</a>,
+                          label: <Link href="/open-account">افتتاح حساب</Link>,
                           key: "0",
                         },
                         {

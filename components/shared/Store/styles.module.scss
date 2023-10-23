@@ -17,6 +17,71 @@
     }
   }
   .wrapperFilter {
+    border: 1px solid #74797f;
+    border-radius: 16px;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    .btnDelete {
+      width: 86px;
+      height: 40px;
+      background-color: transparent;
+      border: 0;
+      color: #2d5da7 !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      box-shadow: 0 0 0px;
+      padding: 0;
+    }
+    .btnFilter {
+      border: #74797f 1px solid !important;
+      border-radius: 8px;
+      height: 32px;
+      padding: 6px 16px 6px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #44474e !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .btnFilterActive {
+      background-color: #e7f48a;
+      border: 0;
+      border-radius: 8px;
+      height: 32px;
+      padding: 6px 16px 6px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1a1e00 !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    // Collapse
+    [class~="ant-collapse"] {
+      border: 0;
+      [class~="ant-collapse-item"] {
+        border-bottom: 0 !important;
+      }
+    }
+    [class~="ant-collapse-header"] {
+      background-color: #f9fafa;
+      border-radius: 8px;
+      border: 0;
+      padding: 16px 0px 16px 0px;
+      height: 56px;
+    }
+    [class~="ant-collapse-content"] {
+      border-top: 0;
+      background-color: #f9fafa;
+      [class~="ant-collapse-content-box"] {
+        padding: 0px 0px 16px 0px;
+      }
+    }
   }
   .btnMore {
     border: 1px solid #74797f !important;
@@ -24,6 +89,20 @@
     height: 40px;
     width: 100%;
     color: #2d5da7 !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .btnAddFilter {
+    background-color: #1a1b1f1f;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 0 !important;
+    color: #1a1b1f61 !important;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;

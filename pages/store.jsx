@@ -5,7 +5,6 @@ import Header from "@/components/inc/Header";
 import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Footer from "@/components/shared/Footer";
-import Bnpl from "@/components/shared/Bnpl";
 import Store from "@/components/shared/Store";
 
 const StoreIndex = () => {
