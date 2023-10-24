@@ -5,12 +5,21 @@ import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Cart from "@/components/shared/Cart";
 import Footer from "@/components/shared/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { cardFaqData } from "@/utils/data";
 
 const CartIndex = () => {
   const [inputs, setInputs] = useState({
     drawer: false,
+    faq: null,
   });
+
+  useEffect(() => {
+    setInputs((prev) => {
+      return { ...prev, faq: cardFaqData };
+    });
+  }, []);
+
   return (
     <MainLayotus
       header={
@@ -39,7 +48,7 @@ const CartIndex = () => {
       }
       footer={<Footer />}
     >
-      <Cart />
+      <Cart faqData={inputs.faq} />
     </MainLayotus>
   );
 };

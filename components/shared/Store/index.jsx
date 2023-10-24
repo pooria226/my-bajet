@@ -153,6 +153,262 @@ const Store = () => {
                 </div>
               </div>
             </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
+            <div className={Styles.item}>
+              <div className="flex gap-3">
+                <div>
+                  <ImageProvider
+                    aspectRatio={1 / 1}
+                    width={48}
+                    height={48}
+                    src={"/assets/images/svgs/store.svg"}
+                  />
+                </div>
+                <div>
+                  <p className={Styles.title}>افق کوروش</p>
+                  <p className={Styles.text}>کالای مصرفی</p>
+                </div>
+              </div>
+            </div>
             <div
               style={{ height: 56 }}
               className="flex justify-center items-center py-2"
@@ -471,7 +727,7 @@ const Store = () => {
             </div>
           </Wrapper>
         </div>
-        <div lang="md:hidden block">
+        <div className="md:hidden block">
           <div>
             <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
           </div>

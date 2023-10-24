@@ -1,55 +1,24 @@
 import Styles from "./styles.module.scss";
 
-import ShoppingCartIcon from "@/public/assets/images/svgs/shopping-cart.svg";
-import ReceitLongIcon from "@/public/assets/images/svgs/receipt-long.svg";
-import RedeemIcon from "@/public/assets/images/svgs/redeem.svg";
-
-const AdvantagesCredit = ({}) => {
+const AdvantagesCredit = ({ data = [], title }) => {
   return (
     <div className={Styles.wrapper}>
       <div>
-        <p className={Styles.title}>مزایای استفاده از اعتبار باجت</p>
+        <p className={Styles.title}>{title}</p>
       </div>
       <div className="grid grid-cols-12 pt-10 md:gap-y-0 gap-8">
-        <div className="md:col-span-4 col-span-12">
-          <div className="flex justify-center flex-col items-center">
-            <div className={Styles.cricle}>
-              <ShoppingCartIcon />
+        {data.map((item, index) => {
+          return (
+            <div key={index} className="md:col-span-4 col-span-12">
+              <div className="flex justify-center flex-col items-center">
+                <div className={Styles.cricle}>{item.icon}</div>
+                <div>
+                  <p className={Styles.text}>{item.text}</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p className={Styles.text}>
-                دسترسی به تعداد زیادی فروشگاه و <br /> تعداد متنوعی محصول برای
-                خرید
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="md:col-span-4 col-span-12">
-          <div className="flex justify-center flex-col items-center">
-            <div className={Styles.cricle}>
-              <ReceitLongIcon />
-            </div>
-            <div>
-              <p className={Styles.text}>
-                بدون نیاز به فیش حقوقی، گواهی کسر از حقوق، <br /> چک و سفته برای
-                اشخاص
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="md:col-span-4 col-span-12">
-          <div className="flex justify-center flex-col items-center">
-            <div className={Styles.cricle}>
-              <RedeemIcon />
-            </div>
-            <div>
-              <p className={Styles.text}>
-                تقویت برند کارفرمایی سازمان‌ها <br /> با تعریف اعتبار برای
-                کارمندان‌
-              </p>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );

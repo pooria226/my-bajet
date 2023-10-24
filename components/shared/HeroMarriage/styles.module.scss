@@ -39,6 +39,40 @@
         font-weight: 600;
         font-size: 28px;
         line-height: 36px;
+        [class~="riyal"] {
+          color: #44474e !important;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 31.2px;
+          padding-inline-start: 2.5px;
+        }
+      }
+    }
+    .badgePrice {
+      margin-top: 24px;
+      background-color: #f5faff;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+      .titleBadge {
+        color: #2d5da7;
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .textBadge {
+        color: #1a1c1f;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        [class~="riyal"] {
+          color: #44474e !important;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 31.2px;
+          padding-inline-start: 2.5px;
+        }
       }
     }
   }
@@ -88,6 +122,33 @@
           line-height: 36px;
         }
       }
+      .badgePrice {
+        margin-top: 24px;
+        background-color: #f5faff;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+        .titleBadge {
+          color: #2d5da7;
+          line-height: 28px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .textBadge {
+          color: #1a1c1f;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 36px;
+          [class~="riyal"] {
+            color: #44474e !important;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31.2px;
+            padding-inline-start: 2.5px;
+          }
+        }
+      }
     }
   }
 }
@@ -133,6 +194,33 @@
           font-weight: 600;
           font-size: 28px;
           line-height: 36px;
+        }
+      }
+      .badgePrice {
+        margin-top: 24px;
+        background-color: #f5faff;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+        .titleBadge {
+          color: #2d5da7;
+          line-height: 28px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .textBadge {
+          color: #1a1c1f;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 36px;
+          [class~="riyal"] {
+            color: #44474e !important;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31.2px;
+            padding-inline-start: 2.5px;
+          }
         }
       }
     }
@@ -183,66 +271,47 @@
           line-height: 36px;
         }
       }
-    }
-  }
-}
-
-@media only screen and (max-width: 930px) {
-  .wrapper {
-    position: relative;
-    .footer {
-      position: absolute;
-      bottom: 16px;
-      left: 60px;
-      height: 216px;
-      width: 325px;
-      .title {
-        color: #001b3f;
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 30px;
-        margin-bottom: 0px;
-      }
-      .text {
-        color: #44474e;
-        font-weight: 500;
-        font-size: 16px;
-        margin-top: 0px;
-        line-height: 22px;
-        margin-bottom: 8px;
-      }
-      .badge {
-        margin-top: 16px;
+      .badgePrice {
+        margin-top: 24px;
         background-color: #f5faff;
-        height: 44px;
+        height: 52px;
         display: flex;
         align-items: center;
         border-radius: 16px;
         .titleBadge {
           color: #2d5da7;
-          font-size: 16px;
+          line-height: 28px;
+          font-size: 20px;
           font-weight: 600;
-          line-height: 22px;
         }
         .textBadge {
           color: #1a1c1f;
           font-weight: 600;
-          font-size: 24px;
-          line-height: 30px;
+          font-size: 28px;
+          line-height: 36px;
+          [class~="riyal"] {
+            color: #44474e !important;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31.2px;
+            padding-inline-start: 2.5px;
+          }
         }
       }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 1024px) {
   .wrapper {
     position: relative;
     .footer {
       position: absolute;
       bottom: 40px;
       left: 16px;
-      height: 248px;
+      height: 303px;
       width: calc(100% - 32px);
       .title {
         color: #001b3f;
@@ -271,15 +340,42 @@
         border-radius: 16px;
         .titleBadge {
           color: #2d5da7;
+          line-height: 20.8px;
           font-size: 16px;
           font-weight: 600;
-          line-height: 20px;
         }
         .textBadge {
           color: #1a1c1f;
           font-weight: 600;
           font-size: 24px;
           line-height: 31.2px;
+        }
+      }
+      .badgePrice {
+        margin-top: 12px;
+        background-color: #f5faff;
+        height: 84px;
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+        .titleBadge {
+          color: #2d5da7;
+          line-height: 20.8px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .textBadge {
+          color: #1a1c1f;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 31.2px;
+          [class~="riyal"] {
+            color: #44474e !important;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31.2px;
+            padding-inline-start: 2.5px;
+          }
         }
       }
     }

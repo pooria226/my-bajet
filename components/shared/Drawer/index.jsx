@@ -51,10 +51,17 @@ const DrawerItem = ({ onClose, open }) => {
                   label: "تسهیلات و اعتبارات",
                   children: (
                     <div>
-                      <div className={Styles.item}>
-                        <p>وام ازدواج</p>
-                      </div>
-
+                      <Link href={"/marriage"}>
+                        <div
+                          className={
+                            router.route == "/marriage"
+                              ? Styles.itemActive
+                              : Styles.item
+                          }
+                        >
+                          <p>وام ازدواج</p>
+                        </div>
+                      </Link>
                       <Link href={"/bnpl"}>
                         <div
                           className={

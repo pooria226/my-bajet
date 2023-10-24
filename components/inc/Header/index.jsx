@@ -59,7 +59,7 @@ const Header = ({ onOpen, open, onClose }) => {
                       text={"تسهیلات و اعتبارات"}
                       items={[
                         {
-                          label: <a href="#">وام ازدواج</a>,
+                          label: <Link href="/marriage">وام ازدواج</Link>,
                           key: "0",
                         },
                         {

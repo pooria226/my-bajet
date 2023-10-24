@@ -32,7 +32,14 @@ const StoreIndex = () => {
         <BreadCrumbItem
           items={[
             { title: <Link href={"/"}>خانه</Link> },
-            { title: <Link href={"#"}>...</Link> },
+            {
+              title: (
+                <Link href={"#"}>
+                  <span className="md:hidden block">...</span>
+                  <span className="md:block hidden">تسهیلات و اعتبارات</span>
+                </Link>
+              ),
+            },
             { title: <Link href={"/bnpl"}>خدمات اعتباری (BNPL)</Link> },
             { title: "فروشگاه‌ها" },
           ]}

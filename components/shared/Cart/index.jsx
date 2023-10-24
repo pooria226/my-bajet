@@ -11,7 +11,7 @@ const CarouselItem = dynamic(() => import("../Carousel/index"), {
   ssr: false,
 });
 
-const Cart = ({}) => {
+const Cart = ({ faqData }) => {
   return (
     <Container>
       <div className={Styles.wrapper}>
@@ -24,7 +24,7 @@ const Cart = ({}) => {
         <CartService />
       </div>
       <div>
-        <Faq />
+        <Faq data={faqData} />
       </div>
       <div>
         <Help text={"پشتیبانی کارت در کنار شماست"} />

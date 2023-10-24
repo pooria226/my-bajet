@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import Styles from "./styles.module.scss";
 import ImageProvider from "@/provider/ImageProvider";
-import { Button } from "antd";
 import { useRouter } from "next/router";
+import CountUp from "react-countup";
 
 const HeroOpenAccount = ({}) => {
   const router = useRouter();
@@ -22,9 +22,9 @@ const HeroOpenAccount = ({}) => {
         <div>
           <ImageProvider
             classes={"image-res"}
-            aspectRatio={360 / 880}
+            aspectRatio={360 / 638}
             width={"100%"}
-            height={"880px"}
+            height={"638px"}
             src={"/assets/images/png/open-account-mobile.png"}
           />
         </div>
@@ -34,7 +34,7 @@ const HeroOpenAccount = ({}) => {
           <p className={Styles.title}>
             آنلاین و سریع <br /> افتتاح حساب کن!
           </p>
-          <div className="pt-6">
+          <div className="lg:pt-6 md:pt-4 pt-2">
             <p className={Styles.text}>افتتاح حساب هوشمند و سریع باجت</p>
             <p className={Styles.text}>مدیریت سایر حساب‌های باجت و تجارت</p>
             <p className={Styles.text}>فرآیندی راحت با امضای دیجیتال باجت</p>
@@ -47,17 +47,25 @@ const HeroOpenAccount = ({}) => {
                 <p className={Styles.titleBadge}>تعداد افتتاح حساب</p>
               </div>
               <div>
-                <p className={Styles.textBadge}>15,327</p>
+                <p className={Styles.textBadge}>
+                  <CountUp end={15000} />
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="md:hidden block">
           <div className={`${Styles.badge}`}>
-            <p>
-              <span>بدون پول نقد</span> از 200+ فروشگاه موجود <br /> در اکوسیستم
-              همکاری ما خرید کنید.
-            </p>
+            <div className="flex justify-between items-center w-full px-6">
+              <div>
+                <p className={Styles.titleBadge}>تعداد افتتاح حساب</p>
+              </div>
+              <div>
+                <p className={Styles.textBadge}>
+                  <CountUp end={15000} />
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

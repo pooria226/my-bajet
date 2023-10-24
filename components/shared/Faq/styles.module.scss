@@ -8,4 +8,33 @@
     font-size: 32px;
     line-height: 41.6px;
   }
+  [class~="has-bollet"] {
+    padding-inline-start: 14px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background-color: #2d5da7;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    margin-bottom: 40px;
+    .title {
+      margin-top: 40px;
+      margin-bottom: 24px;
+      color: #1a1c1f;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 31.2px;
+      text-align: center;
+    }
+  }
 }

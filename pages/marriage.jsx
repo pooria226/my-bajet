@@ -5,49 +5,46 @@ import Header from "@/components/inc/Header";
 import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Footer from "@/components/shared/Footer";
-import Bnpl from "@/components/shared/Bnpl";
-import { bnplFaqData } from "@/utils/data";
+import Marriage from "@/components/shared/Marriage";
+import { openAccountFaqData } from "@/utils/data";
 
-import ShoppingCartIcon from "@/public/assets/images/svgs/shopping-cart.svg";
-import ReceitLongIcon from "@/public/assets/images/svgs/receipt-long.svg";
-import RedeemIcon from "@/public/assets/images/svgs/redeem.svg";
+import AcuteIcon from "@/public/assets/images/svgs/acute.svg";
+import TransportationIcon from "@/public/assets/images/svgs/transportation.svg";
+import BalanceIcon from "@/public/assets/images/svgs/balance.svg";
 
-const BnplIndex = () => {
+const MarriageIndex = () => {
   const [inputs, setInputs] = useState({
     drawer: false,
     faq: null,
     advantagesCredit: [
       {
-        icon: <ShoppingCartIcon />,
+        icon: <AcuteIcon />,
         text: (
           <span>
-            دسترسی به تعداد زیادی فروشگاه و <br /> تعداد متنوعی محصول برای خرید
+            دریافت وام ازدواج در حداقل زمان ممکن (کاهش زمان <br /> دریافت از
+            حداقل 3 هفته به حداکثر 1 ساعت)
           </span>
         ),
       },
       {
-        icon: <ReceitLongIcon />,
+        icon: <TransportationIcon />,
         text: (
           <span>
-            بدون نیاز به فیش حقوقی، گواهی کسر از حقوق، <br /> چک و سفته برای
-            اشخاص
+            کاهش حدود 500 تا 600 هزار سفر شهری برای تحویل <br /> مدارک متقاضی و
+            ضامن‌ها به شعب
           </span>
         ),
       },
       {
-        icon: <RedeemIcon />,
-        text: (
-          <span>
-            تقویت برند کارفرمایی سازمان‌ها <br /> با تعریف اعتبار برای کارمندان,
-          </span>
-        ),
+        icon: <BalanceIcon />,
+        text: <span>افزایش عدالت اجتماعی با حذف نظرات سلیقه‌ای</span>,
       },
     ],
   });
 
   useEffect(() => {
     setInputs((prev) => {
-      return { ...prev, faq: bnplFaqData };
+      return { ...prev, faq: openAccountFaqData };
     });
   }, []);
 
@@ -73,15 +70,18 @@ const BnplIndex = () => {
           items={[
             { title: <Link href={"/"}>خانه</Link> },
             { title: <Link href={"#"}>تسهیلات و اعتبارات</Link> },
-            { title: "خدمات اعتباری (BNPL)" },
+            { title: "وام ازدواج" },
           ]}
         />
       }
       footer={<Footer />}
     >
-      <Bnpl advantagesCredit={inputs.advantagesCredit} faqData={inputs.faq} />
+      <Marriage
+        advantagesCredit={inputs.advantagesCredit}
+        faqData={inputs.faq}
+      />
     </MainLayotus>
   );
 };
 
-export default BnplIndex;
+export default MarriageIndex;

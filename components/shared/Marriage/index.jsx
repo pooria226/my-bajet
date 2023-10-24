@@ -1,37 +1,37 @@
+import AbsenteeLoan from "../AbsenteeLoan";
 import AdvantagesCredit from "../AdvantagesCredit";
-import BnplStep from "../BnplStep";
 import Container from "../Container";
 import Faq from "../Faq";
 import Help from "../Help";
-import HeroBnpl from "../HeroBnpl";
-import RecevieCredit from "../RecevieCredit";
+import HeroMarriage from "../HeroMarriage";
+import MarriageStep from "../MarriageStep";
 
-const Bnpl = ({ faqData, advantagesCredit }) => {
+const Marriage = ({ faqData = [], advantagesCredit = [] }) => {
   return (
     <Container>
       <div>
-        <HeroBnpl />
+        <HeroMarriage />
       </div>
       <div>
-        <RecevieCredit />
+        <AbsenteeLoan />
       </div>
       <div>
         <AdvantagesCredit
-          title={"مزایای استفاده از اعتبار باجت"}
+          title={"مزایای دریافت وام ازدواج از باجت"}
           data={advantagesCredit}
         />
       </div>
       <div>
-        <BnplStep />
+        <MarriageStep />
       </div>
       <div>
         <Faq data={faqData} />
       </div>
       <div>
-        <Help text="پشتیبانی BNPL در کنار شماست" />
+        <Help text="پشتیبانی در کنار شماست" />
       </div>
     </Container>
   );
 };
 
-export default Bnpl;
+export default Marriage;

@@ -4,7 +4,7 @@ import Help from "../Help";
 import HeroOpenAccount from "../HeroOpenAccount";
 import OpenAccountStep from "../OpenAccountStep";
 
-const OpenAccount = () => {
+const OpenAccount = ({ faqData = [] }) => {
   return (
     <Container>
       <div>
@@ -14,7 +14,7 @@ const OpenAccount = () => {
         <OpenAccountStep />
       </div>
       <div>
-        <Faq />
+        <Faq data={faqData} />
       </div>
       <div>
         <Help text="پشتیبانی در کنار شماست" />
