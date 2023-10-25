@@ -17,7 +17,7 @@ const Marriage = ({ faqData = [], advantagesCredit = [] }) => {
       </div>
       <div>
         <AdvantagesCredit
-          title={"مزایای دریافت وام ازدواج از باجت"}
+          title={<span>مزایای دریافت وام ازدواج از باجت</span>}
           data={advantagesCredit}
         />
       </div>

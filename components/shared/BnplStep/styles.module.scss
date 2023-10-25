@@ -89,13 +89,24 @@
       width: 296px !important;
       height: 296px !important;
     }
-
     .stepTitle {
       text-align: center;
+      font-size: 14px;
+      line-height: 16px;
     }
     .stepSubTitle {
       text-align: center;
       margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+    }
+    .textItem {
+      color: #44474e;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
     }
     .btnDownload {
       width: 100%;

@@ -6,6 +6,7 @@ import ContactUs from "../ContactUs";
 import Social from "../Social";
 import { Collapse } from "antd";
 import ImageProvider from "@/provider/ImageProvider";
+import { appConfig } from "@/app-config";
 
 import Styles from "./styles.module.scss";
 
@@ -18,6 +19,7 @@ import LocationIcon from "@/public/assets/images/svgs/location.svg";
 import InstagramIcon from "@/public/assets/images/svgs/instagram.svg";
 import LinkedinIcon from "@/public/assets/images/svgs/linkedin.svg";
 import BaleIcon from "@/public/assets/images/svgs/bale.svg";
+import AparatIcon from "@/public/assets/images/svgs/aparat-footer.svg";
 import TelegramIcon from "@/public/assets/images/svgs/telegram.svg";
 import TwitterIcon from "@/public/assets/images/svgs/twitter.svg";
 import LogoTypeIcon from "@/public/assets/images/svgs/logo-type.svg";
@@ -44,12 +46,12 @@ const Footer = () => {
                       <div>
                         <div className="flex flex-col">
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link className={Styles.link} href={"/marriage"}>
                               وام ازدواج
                             </Link>
                           </div>
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link className={Styles.link} href={"/bnpl"}>
                               خدمات اعتباری (BNPL)
                             </Link>
                           </div>
@@ -84,12 +86,15 @@ const Footer = () => {
                       <div>
                         <div className="flex flex-col">
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link
+                              className={Styles.link}
+                              href={"/open-account"}
+                            >
                               افتتاح حساب
                             </Link>
                           </div>
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link className={Styles.link} href={"/cart"}>
                               خدمات کارت
                             </Link>
                           </div>
@@ -106,13 +111,19 @@ const Footer = () => {
               <div className="col-span-2">
                 <div className="flex flex-col justify-end items-end">
                   <div>
-                    <BazarIcon />
+                    <Link href={appConfig.cafebazaarAppUrl}>
+                      <BazarIcon />
+                    </Link>
                   </div>
                   <div className="pt-2">
-                    <MyKetIcon />
+                    <Link href={appConfig.myketAppUrl}>
+                      <MyKetIcon />
+                    </Link>
                   </div>
                   <div className="pt-2">
-                    <BajeetIcon />
+                    <Link href={appConfig.appUrl}>
+                      <BajeetIcon />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -153,7 +164,14 @@ const Footer = () => {
                 children: (
                   <div>
                     <div className="box">
-                      <p className="text-acc">خدمات اعتباری (BNPL)</p>
+                      <Link href={"/marriage"}>
+                        <p className="text-acc">وام ازدواج</p>
+                      </Link>
+                    </div>
+                    <div className="box">
+                      <Link href={"/bnpl"}>
+                        <p className="text-acc">خدمات اعتباری (BNPL)</p>
+                      </Link>
                     </div>
                     <div className="box">
                       <p className="text-acc">تسهیلات آسان باجت (تاب)</p>
@@ -196,10 +214,14 @@ const Footer = () => {
                 children: (
                   <div>
                     <div className="box">
-                      <p>افتتاح حساب</p>
+                      <Link href={"/open-account"}>
+                        <p className="text-acc">افتتاح حساب</p>
+                      </Link>
                     </div>
                     <div className="box">
-                      <p>خدمات کارت</p>
+                      <Link href={"/cart"}>
+                        <p className="text-acc">خدمات کارت</p>
+                      </Link>
                     </div>
                     <div className="box">
                       <div className="flex justify-between w-full">
@@ -222,28 +244,34 @@ const Footer = () => {
           <div>
             <div className="flex flex-col justify-center items-center py-4">
               <div>
-                <ImageProvider
-                  aspectRatio={135 / 40}
-                  src={"/assets/images/svgs/bazar.svg"}
-                  width={135}
-                  height={40}
-                />
+                <Link href={appConfig.cafebazaarAppUrl}>
+                  <ImageProvider
+                    aspectRatio={135 / 40}
+                    src={"/assets/images/svgs/bazar.svg"}
+                    width={135}
+                    height={40}
+                  />
+                </Link>
               </div>
               <div className="pt-2">
-                <ImageProvider
-                  aspectRatio={135 / 40}
-                  src={"/assets/images/svgs/my-ket.svg"}
-                  width={135}
-                  height={40}
-                />
+                <Link href={appConfig.myketAppUrl}>
+                  <ImageProvider
+                    aspectRatio={135 / 40}
+                    src={"/assets/images/svgs/my-ket.svg"}
+                    width={135}
+                    height={40}
+                  />
+                </Link>
               </div>
               <div className="pt-2">
-                <ImageProvider
-                  aspectRatio={135 / 40}
-                  src={"/assets/images/svgs/bajeet.svg"}
-                  width={135}
-                  height={40}
-                />
+                <Link href={appConfig.appUrl}>
+                  <ImageProvider
+                    aspectRatio={135 / 40}
+                    src={"/assets/images/svgs/bajeet.svg"}
+                    width={135}
+                    height={40}
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -260,37 +288,78 @@ const Footer = () => {
             style={{ maxWidth: "328px", width: "100%" }}
             className="py-2 flex justify-between px-16 gap-0 mx-auto mb-4"
           >
-            <Link className={Styles.linkMobile} href={"#"}>
+            <Link
+              className={Styles.LinkMobile}
+              href={"https://Instagram.com/mybajet"}
+            >
               <InstagramIcon />
             </Link>
-            <Link className={Styles.linkMobile} href={"#"}>
+            <Link
+              className={Styles.LinkMobile}
+              href={"https://linkedin.com/company/mybajet"}
+            >
               <LinkedinIcon />
             </Link>
-            <Link className={Styles.linkMobile} href={"#"}>
+            <Link className={Styles.LinkMobile} href={"https://ble.ir/mybajet"}>
               <BaleIcon />
+            </Link>{" "}
+            <Link className={Styles.LinkMobile} href={"#"}>
+              <AparatIcon />
             </Link>
-            <Link className={Styles.linkMobile} href={"#"}>
+            <Link className={Styles.LinkMobile} href={"https://t.me/mybajet"}>
               <TelegramIcon />
             </Link>
-            <Link className={Styles.linkMobile} href={"#"}>
+            <Link
+              className={Styles.LinkMobile}
+              href={"https://Twitter.com/mybajet_ir"}
+            >
               <TwitterIcon />
             </Link>
           </div>
           <div>
             <div className="flex justify-center items-center gap-4">
-              <div>
+              <ImageProvider
+                aspectRatio={83 / 32}
+                width={83}
+                height={32}
+                src={"/assets/images/svgs/danesh-bonyan.svg"}
+              />
+
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods",
+                    "Popup",
+                    "toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30"
+                  )
+                }
+                href={
+                  "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods"
+                }
+              >
                 <ImageProvider
-                  width={80}
-                  aspectRatio={80 / 80}
-                  src={"/assets/images/svgs/samandhi.svg"}
+                  width={56}
+                  aspectRatio={56 / 56}
+                  src={
+                    "https://logo.samandehi.ir/logo.aspx?id=320024&p=qftiodrflymalymaodrfshwl"
+                  }
                 />
               </div>
               <div>
-                <ImageProvider
-                  width={80}
-                  aspectRatio={80 / 80}
-                  src={"/assets/images/svgs/samandhi.svg"}
-                />
+                <Link
+                  target="_blank"
+                  href={
+                    "https://trustseal.enamad.ir/?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
+                  }
+                >
+                  <ImageProvider
+                    width={56}
+                    aspectRatio={56 / 56}
+                    src={
+                      "https://Trustseal.eNamad.ir/logo.aspx?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
+                    }
+                  />
+                </Link>
               </div>
             </div>
           </div>

@@ -4,6 +4,9 @@ var webpack = require("webpack");
 
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ["localhost:3000", "logo.samandehi.ir", "trustseal.enamad.ir"],
+  },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/i,

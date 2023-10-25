@@ -10,8 +10,12 @@ import BoltIcon from "@/public/assets/images/svgs/bolt.svg";
 
 import Styles from "./styles.module.scss";
 import Wrapper from "../Wrapper";
+import Link from "next/link";
+import { appConfig } from "@/app-config";
+import { useRouter } from "next/router";
 
 const Services = () => {
+  const router = useRouter();
   return (
     <Container>
       <Wrapper>
@@ -76,8 +80,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="mt-4 flex flex-wrap  gap-x-2 gap-y-4">
-                  <Button>افتتاح حساب</Button>
-                  <Button>خدمات کارت</Button>
+                  <Button onClick={() => router.push("/open-account")}>
+                    افتتاح حساب
+                  </Button>
+                  <Button onClick={() => router.push("/cart")}>
+                    خدمات کارت
+                  </Button>
                   <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
                 </div>
               </div>
@@ -145,9 +153,13 @@ const Services = () => {
                 <div className="mt-4 flex flex-wrap gap-x-2 gap-y-4">
                   <Button>تسهیلات اسنوا</Button>
                   <Button>تسهیلات آسان باجت (تاب)</Button>
-                  <Button>وام ازدواج</Button>
+                  <Button onClick={() => router.push("marriage")}>
+                    وام ازدواج
+                  </Button>
                   <Button>تسهیلات سازمانی (کارنو وام)</Button>
-                  <Button>خدمات اعتباری (BNPL)</Button>
+                  <Button onClick={() => router.push("/bnpl")}>
+                    خدمات اعتباری (BNPL)
+                  </Button>
                   <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
                 </div>
               </div>
@@ -198,28 +210,34 @@ const Services = () => {
             <div className="lg:col-span-4 md:col-span-6 col-span-12 flex items-center justify-between md:pt-0 pt-14">
               <div className="flex flex-col justify-end md:items-end items-center w-full">
                 <div>
-                  <ImageProvider
-                    height={"40px"}
-                    width={135}
-                    aspectRatio={135 / 40}
-                    src={"/assets/images/svgs/bazar.svg"}
-                  />
+                  <Link href={appConfig.cafebazaarAppUrl}>
+                    <ImageProvider
+                      height={"40px"}
+                      width={135}
+                      aspectRatio={135 / 40}
+                      src={"/assets/images/svgs/bazar.svg"}
+                    />
+                  </Link>
                 </div>
                 <div className="pt-2">
-                  <ImageProvider
-                    height={"40px"}
-                    width={135}
-                    aspectRatio={135 / 135}
-                    src={"/assets/images/svgs/my-ket.svg"}
-                  />
+                  <Link href={appConfig.myketAppUrl}>
+                    <ImageProvider
+                      height={"40px"}
+                      width={135}
+                      aspectRatio={135 / 135}
+                      src={"/assets/images/svgs/my-ket.svg"}
+                    />
+                  </Link>
                 </div>
                 <div className="pt-2">
-                  <ImageProvider
-                    width={135}
-                    height={"40px"}
-                    aspectRatio={135 / 40}
-                    src={"/assets/images/svgs/bajeet.svg"}
-                  />
+                  <Link href={appConfig.appUrl}>
+                    <ImageProvider
+                      width={135}
+                      height={"40px"}
+                      aspectRatio={135 / 40}
+                      src={"/assets/images/svgs/bajeet.svg"}
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="md:ps-14 md:block hidden w-full">

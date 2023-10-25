@@ -5,8 +5,13 @@ import Wrapper from "../Wrapper";
 import { Button } from "antd";
 import Tabbar from "../Tabbar";
 import { useState } from "react";
+import Link from "next/link";
+import { appConfig } from "@/app-config";
+import { useRouter } from "next/router";
 
 const BnplStep = () => {
+  const router = useRouter();
+
   const [inputs, setInputs] = useState({
     tab: 1,
   });
@@ -50,22 +55,34 @@ const BnplStep = () => {
                           footer: (
                             <div className="flex md:flex-row flex-col justify-between items-center gap-2">
                               <Button className={Styles.btnDownload}>
-                                <ImageProvider
-                                  src={"/assets/images/svgs/logo.svg"}
-                                  width={18}
-                                  aspectRatio={18 / 18}
-                                  height={18}
-                                />
-                                <p>دانلود باجت</p>
+                                <Link
+                                  className="flex px-12 py-3"
+                                  href={appConfig.appUrl}
+                                >
+                                  <ImageProvider
+                                    src={"/assets/images/svgs/logo.svg"}
+                                    width={18}
+                                    aspectRatio={18 / 18}
+                                    height={18}
+                                  />
+                                  <p className="ps-2">دانلود باجت</p>
+                                </Link>
                               </Button>
+
                               <Button className={Styles.course}>
-                                <ImageProvider
-                                  src={"/assets/images/svgs/aparat.svg"}
-                                  width={18}
-                                  aspectRatio={18 / 18}
-                                  height={18}
-                                />
-                                <p>آموزش ویدئویی</p>
+                                <Link
+                                  className="flex px-12 py-3"
+                                  href={"https://www.aparat.com/v/E5Kci"}
+                                  target="_blank"
+                                >
+                                  <ImageProvider
+                                    src={"/assets/images/svgs/aparat.svg"}
+                                    width={18}
+                                    aspectRatio={18 / 18}
+                                    height={18}
+                                  />
+                                  <p className="ps-2">آموزش ویدئویی</p>
+                                </Link>
                               </Button>
                             </div>
                           ),
@@ -77,13 +94,19 @@ const BnplStep = () => {
                           footer: (
                             <div className="flex justify-end">
                               <Button className={Styles.btnDownload}>
-                                <ImageProvider
-                                  src={"/assets/images/svgs/logo.svg"}
-                                  width={18}
-                                  aspectRatio={18 / 18}
-                                  height={18}
-                                />
-                                <p>دانلود باجت</p>
+                                <Link
+                                  style={{ borderRadius: 20 }}
+                                  className="flex px-12 py-3"
+                                  href={appConfig.appUrl}
+                                >
+                                  <ImageProvider
+                                    src={"/assets/images/svgs/logo.svg"}
+                                    width={18}
+                                    aspectRatio={18 / 18}
+                                    height={18}
+                                  />
+                                  <p className="ps-2">دانلود باجت</p>
+                                </Link>
                               </Button>
                             </div>
                           ),
@@ -110,18 +133,27 @@ const BnplStep = () => {
                       </p>
                     </div>
                     <div className="md:pt-5 pt-4">
-                      <div className="flex justify-between items-center gap-2">
+                      <div className="flex md:flex-row flex-col justify-between items-center gap-2">
                         <Button className={Styles.btnDownload}>
-                          <p>صفحه فروشگاه‌ها</p>
+                          <Link className="flex px-12 py-3" href={"/store"}>
+                            <p>صفحه فروشگاه‌ها</p>
+                          </Link>
                         </Button>
                         <Button className={Styles.course}>
-                          <ImageProvider
-                            src={"/assets/images/svgs/aparat.svg"}
-                            width={18}
-                            aspectRatio={18 / 18}
-                            height={18}
-                          />
-                          <p>آموزش ویدئویی</p>
+                          <Link
+                            style={{ borderRadius: 20 }}
+                            className="flex px-12 py-3"
+                            href={"https://www.aparat.com/v/6krxN"}
+                            target="_blank"
+                          >
+                            <ImageProvider
+                              src={"/assets/images/svgs/aparat.svg"}
+                              width={18}
+                              aspectRatio={18 / 18}
+                              height={18}
+                            />
+                            <p className="ps-2">آموزش ویدئویی</p>
+                          </Link>
                         </Button>
                       </div>
                     </div>
@@ -171,13 +203,20 @@ const BnplStep = () => {
                     <div className="md:pt-5 pt-4">
                       <div className="flex justify-end">
                         <Button className={Styles.course}>
-                          <ImageProvider
-                            src={"/assets/images/svgs/aparat.svg"}
-                            width={18}
-                            aspectRatio={18 / 18}
-                            height={18}
-                          />
-                          <p>آموزش ویدئویی</p>
+                          <Link
+                            style={{ borderRadius: 20 }}
+                            className="flex px-12 py-3"
+                            href={"https://www.aparat.com/v/4E6u1"}
+                            target="_blank"
+                          >
+                            <ImageProvider
+                              src={"/assets/images/svgs/aparat.svg"}
+                              width={18}
+                              aspectRatio={18 / 18}
+                              height={18}
+                            />
+                            <p>آموزش ویدئویی</p>
+                          </Link>
                         </Button>
                       </div>
                     </div>

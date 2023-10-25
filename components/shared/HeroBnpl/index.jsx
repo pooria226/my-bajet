@@ -56,12 +56,13 @@ const HeroBnpl = ({}) => {
           </div>
         </div>
         <div className={Styles.buttons}>
-          <Button className={`${Styles.credit} md:order-0 order-1`}>
+          {/* <Button className={`${Styles.credit} md:order-0 order-1`}>
             دریافت اعتبار از باجت
-          </Button>
+          </Button> */}
+
           <Button
             onClick={() => router.push("/store")}
-            className={`${Styles.viewStore} md:order-1 order-0`}
+            className={`${Styles.credit} md:order-1 order-0`}
           >
             مشاهده صفحه فروشگاه‌ها
           </Button>

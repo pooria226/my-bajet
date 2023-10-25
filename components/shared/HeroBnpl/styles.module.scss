@@ -44,6 +44,7 @@
     .buttons {
       margin-top: 40px;
       display: flex;
+      justify-content: end;
       gap: 8px;
       .credit {
         background-color: #2d5da7;
@@ -54,6 +55,7 @@
         font-weight: 500;
         line-height: 20px;
         width: 50%;
+        border: 0;
       }
       .viewStore {
         border: 1px solid #74797f;

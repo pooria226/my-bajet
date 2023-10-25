@@ -7,6 +7,7 @@ import BajetIcon from "@/public/assets/images/svgs/bajet.svg";
 import InstagramIcon from "@/public/assets/images/svgs/instagram.svg";
 import LinkedinIcon from "@/public/assets/images/svgs/linkedin.svg";
 import BaleIcon from "@/public/assets/images/svgs/bale.svg";
+import AparatIcon from "@/public/assets/images/svgs/aparat-footer.svg";
 import TelegramIcon from "@/public/assets/images/svgs/telegram.svg";
 import TwitterIcon from "@/public/assets/images/svgs/twitter.svg";
 import SimorqIcon from "@/public/assets/images/svgs/simorq.svg";
@@ -17,29 +18,37 @@ const Social = ({}) => {
     <div className={Styles.wrapper}>
       <div className="flex justify-between items-center">
         <div>
-          <div className="flex">
-            <div>
-              <LogoIcon />
+          <Link href={"/"}>
+            <div className="flex">
+              <div>
+                <LogoIcon />
+              </div>
+              <div className="ps-3">
+                <BajetIcon />
+              </div>
             </div>
-            <div className="ps-3">
-              <BajetIcon />
-            </div>
-          </div>
+          </Link>
         </div>
         <div className="flex gap-2">
-          <Link className={Styles.link} href={"#"}>
+          <Link className={Styles.link} href={"https://Instagram.com/mybajet"}>
             <InstagramIcon />
           </Link>
-          <Link className={Styles.link} href={"#"}>
+          <Link
+            className={Styles.link}
+            href={"https://linkedin.com/company/mybajet"}
+          >
             <LinkedinIcon />
           </Link>
-          <Link className={Styles.link} href={"#"}>
+          <Link className={Styles.link} href={"https://ble.ir/mybajet"}>
             <BaleIcon />
-          </Link>
+          </Link>{" "}
           <Link className={Styles.link} href={"#"}>
+            <AparatIcon />
+          </Link>
+          <Link className={Styles.link} href={"https://t.me/mybajet"}>
             <TelegramIcon />
           </Link>
-          <Link className={Styles.link} href={"#"}>
+          <Link className={Styles.link} href={"https://Twitter.com/mybajet_ir"}>
             <TwitterIcon />
           </Link>
         </div>

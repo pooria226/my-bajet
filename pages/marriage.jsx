@@ -6,7 +6,7 @@ import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Footer from "@/components/shared/Footer";
 import Marriage from "@/components/shared/Marriage";
-import { openAccountFaqData } from "@/utils/data";
+import { marriageFaqData, openAccountFaqData } from "@/utils/data";
 
 import AcuteIcon from "@/public/assets/images/svgs/acute.svg";
 import TransportationIcon from "@/public/assets/images/svgs/transportation.svg";
@@ -44,7 +44,7 @@ const MarriageIndex = () => {
 
   useEffect(() => {
     setInputs((prev) => {
-      return { ...prev, faq: openAccountFaqData };
+      return { ...prev, faq: marriageFaqData };
     });
   }, []);
 

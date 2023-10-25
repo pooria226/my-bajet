@@ -11,11 +11,16 @@ const AbsenteeLoan = ({}) => {
   return (
     <div className={Styles.wrapper}>
       <Wrapper>
-        <div>
+        <div className="md:block hidden">
           <p className={Styles.title}>شرایط دریافت غیرحضوری وام ازدواج</p>
         </div>
-        <div className="grid grid-cols-12 gap-x-10 pt-10">
-          <div className="col-span-4">
+        <div className="md:hidden block">
+          <p className={Styles.title}>
+            شرایط دریافت <br /> غیرحضوری وام ازدواج
+          </p>
+        </div>
+        <div className="grid grid-cols-12 md:gap-x-10 md:gap-y-0 gap-y-6 pt-10">
+          <div className="md:col-span-4 col-span-12">
             <div className={Styles.boxes}>
               <div className="flex  items-center">
                 <div>
@@ -27,7 +32,7 @@ const AbsenteeLoan = ({}) => {
               </div>
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="md:col-span-4 col-span-12">
             <div className={Styles.boxes}>
               <div className="flex  items-center">
                 <div>
@@ -39,7 +44,7 @@ const AbsenteeLoan = ({}) => {
               </div>
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="md:col-span-4 col-span-12">
             <div className={Styles.boxes}>
               <div className="flex  items-center">
                 <div>

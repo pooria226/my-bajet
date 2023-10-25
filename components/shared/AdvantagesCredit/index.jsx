@@ -1,3 +1,4 @@
+import Wrapper from "../Wrapper";
 import Styles from "./styles.module.scss";
 
 const AdvantagesCredit = ({ data = [], title }) => {
