@@ -15,7 +15,7 @@ const HeroOpenAccount = ({}) => {
           alt=""
           height={553}
           width={1440}
-          src={"/assets/images/png/open-account.png"}
+          src={"/assets/images/svgs/open-account.svg"}
         />
       </div>
       <div className="md:hidden block">
@@ -25,7 +25,7 @@ const HeroOpenAccount = ({}) => {
             aspectRatio={360 / 638}
             width={"100%"}
             height={"638px"}
-            src={"/assets/images/png/open-account-mobile.png"}
+            src={"/assets/images/svgs/open-account-mobile.svg"}
           />
         </div>
       </div>

@@ -18,114 +18,13 @@ const Services = () => {
   const router = useRouter();
   return (
     <Container>
-      <Wrapper>
-        <div className={Styles.wrapper}>
-          <div className="grid grid-cols-12">
-            <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end ">
-              <div className={Styles.paddingContainerEnd}>
-                <div className={Styles.wrapping}>
-                  <div>
-                    <p className={Styles.title}>امضای دیجیتال</p>
-                  </div>
-                  <div>
-                    <p className={Styles.text}>
-                      در هر مکانی که باشید می‌توانید فرآیند دریافت گواهی امضای
-                      دیجیتال را به راحتی انجام دهید تا از اعتبار و امنیت
-                      قرارداد‌های خود آسوده‌خاطر باشید. <br /> فرآیند دریافت
-                      گواهی امضای دیجیتال به اطلاعات کارت ملی و بارگذاری ویدئوی
-                      سلفی نیاز دارد که مجهز به الگوریتم‌های تشخیص زنده بودن
-                      تصویر و تشخیص چهره است.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-normal justify-center">
-              <ImageProvider
-                classes={"image-res"}
-                width={400}
-                aspectRatio={400 / 400}
-                src={"/assets/images/svgs/signature.svg"}
-              />
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-      <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
+      <div className={Styles.wrapper}>
         <Wrapper>
           <div className="grid grid-cols-12">
-            <div className="md:col-span-6 md:pt-0 pt-10 md:order-0 order-1 col-span-12 flex justify-end">
-              <div
-                className={`${Styles.paddingContainerEnd} w-full flex md:justify-end justify-center`}
-              >
-                <ImageProvider
-                  classes={"image-res"}
-                  width={400}
-                  aspectRatio={400 / 400}
-                  src={"/assets/images/svgs/banking.svg"}
-                />
-              </div>
-            </div>
-            <div className="md:col-span-6  col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
-              <div className={Styles.wrapping}>
-                <div>
-                  <p className={Styles.title}>خدمات بانکی</p>
-                </div>
-                <div>
-                  <p className={Styles.text}>
-                    خدمات پایه بانکی مانند افتتاح حساب و صدور کارت، خدمات
-                    پرمخاطبی هستند که پیش‌نیاز سایر خدمات بانکی محسوب می‌شوند.
-                    این خدمات پرتکرار و زمان‌بر در باجت، سریع، آسان و کاملا
-                    آنلاین انجام می‌شوند.
-                  </p>
-                </div>
-                <div className="mt-4 flex flex-wrap  gap-x-2 gap-y-4">
-                  <Button onClick={() => router.push("/open-account")}>
-                    افتتاح حساب
-                  </Button>
-                  <Button onClick={() => router.push("/cart")}>
-                    خدمات کارت
-                  </Button>
-                  <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Wrapper>
-      </div>
-      <Wrapper>
-        <div className={Styles.wrapper}>
-          <div className="grid grid-cols-12">
-            <div className="md:col-span-6 col-span-12 flex flex-col justify-center items-end">
-              <div className={Styles.paddingContainerEnd}>
-                <div className={Styles.wrapping}>
-                  <div>
-                    <p className={Styles.title}>خدمات پرداختی</p>
-                  </div>
-                  <div>
-                    <p className={Styles.text}>
-                      شارژ سیم کارت، پرداخت قبوض، خرید بسته اینترنت و پرداخت
-                      عوارض خودرو از خدمات پرداختی پرکاربرد باجت محسوب می‌شود.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-normal justify-center">
-              <ImageProvider
-                classes={"image-res"}
-                width={400}
-                aspectRatio={400 / 400}
-                src={"/assets/images/svgs/payment.svg"}
-              />
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-      <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
-        <Wrapper>
-          <div className="grid grid-cols-12">
-            <div className="md:col-span-6 md:order-0 md:mt-0 mt-10 order-1 col-span-12 flex justify-end">
+            <div
+              data-aos="fade-up"
+              className="md:col-span-6 md:order-0 md:mt-0 mt-10 order-1 col-span-12 flex justify-end"
+            >
               <div
                 className={`${Styles.paddingContainerEnd} w-full flex md:justify-end justify-center`}
               >
@@ -136,7 +35,10 @@ const Services = () => {
                 />
               </div>
             </div>
-            <div className="md:col-span-6 col-span-12 md:order-1 order-0 flex flex-col justify-center items-start">
+            <div
+              data-aos="fade-down"
+              className="md:col-span-6 col-span-12 md:order-1 order-0 flex flex-col justify-center items-start"
+            >
               <div className={Styles.wrapping}>
                 <div>
                   <p className={Styles.title}>تسهیلات و اعتبارات</p>
@@ -167,6 +69,130 @@ const Services = () => {
           </div>
         </Wrapper>
       </div>
+
+      <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
+        <Wrapper>
+          <div className="grid grid-cols-12">
+            <div
+              data-aos="fade-up"
+              className={`${Styles.paddingContainerEnd} md:col-span-6 col-span-12 md:order-1 order-0 flex flex-col justify-center items-end`}
+            >
+              <div className={Styles.wrapping}>
+                <div>
+                  <p className={Styles.title}>خدمات بانکی</p>
+                </div>
+                <div>
+                  <p className={Styles.text}>
+                    خدمات پایه بانکی مانند افتتاح حساب و صدور کارت، خدمات
+                    پرمخاطبی هستند که پیش‌نیاز سایر خدمات بانکی محسوب می‌شوند.
+                    این خدمات پرتکرار و زمان‌بر در باجت، سریع، آسان و کاملا
+                    آنلاین انجام می‌شوند.
+                  </p>
+                </div>
+                <div className="mt-4 flex flex-wrap  gap-x-2 gap-y-4">
+                  <Button onClick={() => router.push("/open-account")}>
+                    افتتاح حساب
+                  </Button>
+                  <Button onClick={() => router.push("/cart")}>
+                    خدمات کارت
+                  </Button>
+                  <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
+                </div>
+              </div>
+            </div>
+            <div
+              data-aos="fade-down"
+              className="md:col-span-6 md:pt-0 pt-10 md:order-0 order-1 col-span-12 flex justify-end"
+            >
+              <div className={` w-full flex md:justify-start justify-center`}>
+                <ImageProvider
+                  classes={"image-res"}
+                  width={400}
+                  aspectRatio={400 / 400}
+                  src={"/assets/images/svgs/banking.svg"}
+                />
+              </div>
+            </div>
+          </div>
+        </Wrapper>
+      </div>
+
+      <Wrapper>
+        <div className={Styles.wrapper}>
+          <div className="grid grid-cols-12">
+            <div
+              data-aos="fade-up"
+              className={`${Styles.paddingContainerEnd} md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-end justify-center`}
+            >
+              <ImageProvider
+                classes={"image-res"}
+                width={400}
+                aspectRatio={400 / 400}
+                src={"/assets/images/svgs/signature.svg"}
+              />
+            </div>
+            <div
+              data-aos="fade-down"
+              className="md:col-span-6 col-span-12 flex flex-col justify-center items-start "
+            >
+              <div>
+                <div className={Styles.wrapping}>
+                  <div>
+                    <p className={Styles.title}>امضای دیجیتال</p>
+                  </div>
+                  <div>
+                    <p className={Styles.text}>
+                      در هر مکانی که باشید می‌توانید فرآیند دریافت گواهی امضای
+                      دیجیتال را به راحتی انجام دهید تا از اعتبار و امنیت
+                      قرارداد‌های خود آسوده‌خاطر باشید. <br /> فرآیند دریافت
+                      گواهی امضای دیجیتال به اطلاعات کارت ملی و بارگذاری ویدئوی
+                      سلفی نیاز دارد که مجهز به الگوریتم‌های تشخیص زنده بودن
+                      تصویر و تشخیص چهره است.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+
+      <div style={{ background: "#F9FAFA" }} className={Styles.wrapper}>
+        <Wrapper>
+          <div className="grid grid-cols-12">
+            <div
+              data-aos="fade-up"
+              className="md:col-span-6 col-span-12 flex flex-col justify-center items-end"
+            >
+              <div className={Styles.paddingContainerEnd}>
+                <div className={Styles.wrapping}>
+                  <div>
+                    <p className={Styles.title}>خدمات پرداختی</p>
+                  </div>
+                  <div>
+                    <p className={Styles.text}>
+                      شارژ سیم کارت، پرداخت قبوض، خرید بسته اینترنت و پرداخت
+                      عوارض خودرو از خدمات پرداختی پرکاربرد باجت محسوب می‌شود.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-aos="fade-down"
+              className="md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-normal justify-center"
+            >
+              <ImageProvider
+                classes={"image-res"}
+                width={400}
+                aspectRatio={400 / 400}
+                src={"/assets/images/svgs/payment.svg"}
+              />
+            </div>
+          </div>
+        </Wrapper>
+      </div>
+
       <Wrapper>
         <div className={Styles.wrapperDownload}>
           <div className="flex justify-center">

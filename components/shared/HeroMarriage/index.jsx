@@ -15,7 +15,7 @@ const HeroMarriage = ({}) => {
           alt=""
           height={553}
           width={1440}
-          src={"/assets/images/png/open-account.png"}
+          src={"/assets/images/svgs/marriage.svg"}
         />
       </div>
       <div className="lg:hidden block">
@@ -25,7 +25,7 @@ const HeroMarriage = ({}) => {
             aspectRatio={360 / 638}
             width={"100%"}
             height={"638px"}
-            src={"/assets/images/png/marriage-mobile.png"}
+            src={"/assets/images/svgs/marriage-mobile.svg"}
           />
         </div>
       </div>

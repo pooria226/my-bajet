@@ -7,6 +7,8 @@ import BajetIcon from "@/public/assets/images/svgs/bajet.svg";
 import BajetMiniIcon from "@/public/assets/images/svgs/bajet-mini.svg";
 
 import Styles from "./styles.module.scss";
+import Link from "next/link";
+import { appConfig } from "@/app-config";
 
 const Main = ({}) => {
   return (
@@ -42,7 +44,12 @@ const Main = ({}) => {
                 </p>
               </div>
               <div className="pt-10 mt-4 flex justify-center items-center">
-                <Button className={Styles.btns}>دانلود اپلیکیشن باجت</Button>
+                <Link
+                  className="w-full flex justify-center"
+                  href={appConfig.appUrl}
+                >
+                  <Button className={Styles.btns}>دانلود اپلیکیشن باجت</Button>
+                </Link>
               </div>
             </div>
           </div>

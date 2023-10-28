@@ -11,7 +11,7 @@ const HeroCart = ({}) => {
           alt=""
           height={553}
           width={1440}
-          src={"/assets/images/png/cart.png"}
+          src={"/assets/images/svgs/cart-hero.svg"}
         />
       </div>
       <div className="md:hidden block">
@@ -21,7 +21,7 @@ const HeroCart = ({}) => {
             aspectRatio={360 / 574}
             width={"100%"}
             height={"574px"}
-            src={"/assets/images/png/cart-mobile.png"}
+            src={"/assets/images/svgs/cart-hero-mobile.svg"}
           />
         </div>
       </div>

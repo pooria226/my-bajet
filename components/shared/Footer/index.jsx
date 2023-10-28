@@ -318,13 +318,17 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex justify-center items-center gap-4">
-              <ImageProvider
-                aspectRatio={83 / 32}
-                width={83}
-                height={32}
-                src={"/assets/images/svgs/danesh-bonyan.svg"}
-              />
-
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => window.open("/assets/pdf/file.pdf")}
+              >
+                <ImageProvider
+                  aspectRatio={83 / 32}
+                  width={83}
+                  height={32}
+                  src={"/assets/images/svgs/danesh-bonyan.svg"}
+                />
+              </div>
               <div
                 onClick={() =>
                   window.open(

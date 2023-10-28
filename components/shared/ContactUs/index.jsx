@@ -21,7 +21,10 @@ const ContactUs = ({}) => {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => window.open("/assets/pdf/file.pdf")}
+          >
             <ImageProvider
               aspectRatio={104 / 40}
               width={104}
@@ -29,6 +32,7 @@ const ContactUs = ({}) => {
               src={"/assets/images/svgs/danesh-bonyan.svg"}
             />
           </div>
+
           <div>
             <div
               onClick={() =>

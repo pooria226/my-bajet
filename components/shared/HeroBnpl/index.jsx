@@ -15,7 +15,7 @@ const HeroBnpl = ({}) => {
           alt=""
           height={553}
           width={1440}
-          src={"/assets/images/png/bnpl.png"}
+          src={"/assets/images/svgs/bnpl.svg"}
         />
       </div>
       <div className="md:hidden block">
@@ -25,7 +25,7 @@ const HeroBnpl = ({}) => {
             aspectRatio={360 / 880}
             width={"100%"}
             height={"880px"}
-            src={"/assets/images/png/bnpl-mobile.png"}
+            src={"/assets/images/svgs/bnpl-mobile.svg"}
           />
         </div>
       </div>
