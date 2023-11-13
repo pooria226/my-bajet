@@ -38,7 +38,7 @@ const BnplIndex = () => {
         icon: <RedeemIcon />,
         text: (
           <span>
-            تقویت برند کارفرمایی سازمان‌ها <br /> با تعریف اعتبار برای کارمندان,
+            تقویت برند کارفرمایی سازمان‌ها <br /> با تعریف اعتبار برای کارمندان
           </span>
         ),
       },
@@ -53,6 +53,7 @@ const BnplIndex = () => {
 
   return (
     <MainLayotus
+      title={"اپلیکیشن باجت | خرید اعتباری BNPL"}
       header={
         <Header
           onOpen={() =>

@@ -56,22 +56,34 @@ const Footer = () => {
                             </Link>
                           </div>
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link
+                              scroll={false}
+                              className={Styles.link}
+                              href={""}
+                            >
                               تسهیلات آسان باجت (تاب)
                             </Link>
                           </div>
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
+                            <Link
+                              scroll={false}
+                              className={Styles.link}
+                              href={""}
+                            >
                               تسهیلات سازمانی (کارنو وام){" "}
                             </Link>
                           </div>
                           <div className="flex justify-center">
-                            <Link className={Styles.link} href={"#"}>
-                              تسهیلات اسنوا
+                            <Link
+                              scroll={false}
+                              className={Styles.link}
+                              href={""}
+                            >
+                              اعتبار اقساطی گروه پاکشوما
                             </Link>
                           </div>
                           <div className={Styles.link}>
-                            اعتبار اقساطی اسنوا
+                            اعتبار اقساطی گروه انتخاب
                             <span className="ms-3"> به زودی </span>
                           </div>
                         </div>
@@ -109,14 +121,17 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-span-2">
-                <div className="flex flex-col justify-end items-end">
+                <div
+                  id="downloads-item"
+                  className="flex flex-col justify-end items-end"
+                >
                   <div>
-                    <Link href={appConfig.cafebazaarAppUrl}>
+                    <Link target="_blank" href={appConfig.cafebazaarAppUrl}>
                       <BazarIcon />
                     </Link>
                   </div>
                   <div className="pt-2">
-                    <Link href={appConfig.myketAppUrl}>
+                    <Link target="_blank" href={appConfig.myketAppUrl}>
                       <MyKetIcon />
                     </Link>
                   </div>
@@ -180,12 +195,12 @@ const Footer = () => {
                       <p className="text-acc">تسهیلات سازمانی (کارنو وام)</p>
                     </div>
                     <div className="box">
-                      <p className="text-acc">تسهیلات اسنوا</p>
+                      <p className="text-acc">اعتبار اقساطی گروه پاکشوما</p>
                     </div>
                     <div className="box">
                       <div className="flex justify-between w-full">
                         <div>
-                          <p className="text-acc">تسهیلات کالانو</p>
+                          <p className="text-acc">اعتبار اقساطی گروه انتخاب</p>
                         </div>
                         <div>
                           <p className="badge"> به زودی</p>
@@ -244,7 +259,7 @@ const Footer = () => {
           <div>
             <div className="flex flex-col justify-center items-center py-4">
               <div>
-                <Link href={appConfig.cafebazaarAppUrl}>
+                <Link target="_blank" href={appConfig.cafebazaarAppUrl}>
                   <ImageProvider
                     aspectRatio={135 / 40}
                     src={"/assets/images/svgs/bazar.svg"}
@@ -254,7 +269,7 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="pt-2">
-                <Link href={appConfig.myketAppUrl}>
+                <Link target="_blank" href={appConfig.myketAppUrl}>
                   <ImageProvider
                     aspectRatio={135 / 40}
                     src={"/assets/images/svgs/my-ket.svg"}
@@ -264,13 +279,8 @@ const Footer = () => {
                 </Link>
               </div>
               <div className="pt-2">
-                <Link href={appConfig.appUrl}>
-                  <ImageProvider
-                    aspectRatio={135 / 40}
-                    src={"/assets/images/svgs/bajeet.svg"}
-                    width={135}
-                    height={40}
-                  />
+                <Link target="_blank" href={appConfig.appUrl}>
+                  <BajeetIcon />
                 </Link>
               </div>
             </div>
@@ -285,32 +295,47 @@ const Footer = () => {
             </p>
           </div>
           <div
-            style={{ maxWidth: "328px", width: "100%" }}
-            className="py-2 flex justify-between px-16 gap-0 mx-auto mb-4"
+            style={{ width: "100%", height: 56 }}
+            className="pt-2 flex justify-center items-center px-16 gap-0 mx-auto mb-4"
           >
             <Link
-              className={Styles.LinkMobile}
+              target="_blank"
+              className={Styles.linkMobile}
               href={"https://Instagram.com/mybajet"}
             >
               <InstagramIcon />
             </Link>
             <Link
-              className={Styles.LinkMobile}
+              target="_blank"
+              className={Styles.linkMobile}
               href={"https://linkedin.com/company/mybajet"}
             >
               <LinkedinIcon />
             </Link>
-            <Link className={Styles.LinkMobile} href={"https://ble.ir/mybajet"}>
+            <Link
+              target="_blank"
+              className={Styles.linkMobile}
+              href={"https://ble.ir/mybajet"}
+            >
               <BaleIcon />
             </Link>{" "}
-            <Link className={Styles.LinkMobile} href={"#"}>
+            <Link
+              target="_blank"
+              className={Styles.linkMobile}
+              href={"https://www.aparat.com/mybajet"}
+            >
               <AparatIcon />
             </Link>
-            <Link className={Styles.LinkMobile} href={"https://t.me/mybajet"}>
+            <Link
+              target="_blank"
+              className={Styles.linkMobile}
+              href={"https://t.me/mybajet"}
+            >
               <TelegramIcon />
             </Link>
             <Link
-              className={Styles.LinkMobile}
+              target="_blank"
+              className={Styles.linkMobile}
               href={"https://Twitter.com/mybajet_ir"}
             >
               <TwitterIcon />
@@ -329,41 +354,38 @@ const Footer = () => {
                   src={"/assets/images/svgs/danesh-bonyan.svg"}
                 />
               </div>
-              <div
-                onClick={() =>
-                  window.open(
-                    "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods",
-                    "Popup",
-                    "toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30"
-                  )
-                }
-                href={
-                  "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods"
-                }
-              >
-                <ImageProvider
-                  width={56}
-                  aspectRatio={56 / 56}
-                  src={
-                    "https://logo.samandehi.ir/logo.aspx?id=320024&p=qftiodrflymalymaodrfshwl"
+              <div>
+                <img
+                  style={{ width: 56, height: 56 }}
+                  referrerPolicy="origin"
+                  id="rgvjnbqeesgtesgtnbqewlao"
+                  onClick={() =>
+                    window.open(
+                      "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods",
+                      "Popup",
+                      "toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30"
+                    )
                   }
+                  alt="logo-samandehi"
+                  src="https://logo.samandehi.ir/logo.aspx?id=320024&p=qftiodrflymalymaodrfshwl"
+                  className="ecommerce-certificate"
                 />
               </div>
               <div>
-                <Link
+                <a
+                  referrerPolicy="origin"
                   target="_blank"
-                  href={
-                    "https://trustseal.enamad.ir/?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
-                  }
+                  href="https://trustseal.enamad.ir/?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
                 >
-                  <ImageProvider
-                    width={56}
-                    aspectRatio={56 / 56}
-                    src={
-                      "https://Trustseal.eNamad.ir/logo.aspx?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
-                    }
+                  <img
+                    style={{ width: 56, height: 56 }}
+                    referrerPolicy="origin"
+                    src="https://Trustseal.eNamad.ir/logo.aspx?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
+                    alt=""
+                    id="rK0pdm9REhlwQL5nbhau"
+                    className="ecommerce-certificate"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -372,8 +394,13 @@ const Footer = () => {
               <div>
                 <LogoTypeIcon />
               </div>
-              <div>
-                <SimorqTejartIcon />
+              <div className="flex gap-4 items-center">
+                <div>
+                  <p className={Styles.version}>ورژن: {appConfig.appVersion}</p>
+                </div>
+                <div>
+                  <SimorqTejartIcon />
+                </div>
               </div>
             </div>
             <div className={Styles.sepratorMobile}></div>

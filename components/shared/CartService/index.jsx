@@ -9,7 +9,7 @@ const CartService = () => {
         <div>
           <p className={Styles.title}>خدمات غیرحضوری کارت</p>
         </div>
-        <div className="grid grid-cols-12 pt-5 gap-5">
+        <div className="grid grid-cols-12 pt-6 gap-6">
           <div className="col-span-12 flex justify-center">
             <div className={Styles.item}>
               <div className={Styles.circle}>
@@ -23,7 +23,7 @@ const CartService = () => {
               <p>نمایش موجودی</p>
             </div>
             <div className={Styles.item}>
-              <div className={Styles.circle}>
+              <div className={Styles.circleDiactive}>
                 <ImageProvider
                   width={56}
                   height={56}
@@ -36,7 +36,7 @@ const CartService = () => {
           </div>
           <div className="col-span-12 flex justify-center">
             <div className={Styles.item}>
-              <div className={Styles.circle}>
+              <div className={Styles.circleDiactive}>
                 <ImageProvider
                   width={56}
                   height={56}
@@ -47,7 +47,7 @@ const CartService = () => {
               <p>مسدودسازی کارت</p>
             </div>
             <div className={Styles.item}>
-              <div className={Styles.circle}>
+              <div className={Styles.circleDiactive}>
                 <ImageProvider
                   width={56}
                   height={56}
@@ -60,7 +60,7 @@ const CartService = () => {
           </div>
           <div className="col-span-12 flex justify-center">
             <div className={Styles.item}>
-              <div className={Styles.circle}>
+              <div className={Styles.circleDiactive}>
                 <ImageProvider
                   width={56}
                   height={56}

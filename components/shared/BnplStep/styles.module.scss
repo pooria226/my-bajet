@@ -83,11 +83,20 @@
     max-width: 100%;
     width: 100%;
   }
-
   .wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
     [class~="images-responcive"] {
       width: 296px !important;
       height: 296px !important;
+    }
+    .title {
+      color: #1a1c1f;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 40px;
+      text-align: center;
     }
     .stepTitle {
       text-align: center;

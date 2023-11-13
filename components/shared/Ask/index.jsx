@@ -43,7 +43,9 @@ const Ask = ({}) => {
                           <p className={Styles.text}>شماره پشتیبانی باجت:</p>
                         </div>
                         <div>
-                          <p className={Styles.phone}>۰۲۱ - 25961300</p>
+                          <p className={Styles.phone}>
+                            <a href="tel:02125961300">۰۲۱ - 25961300</a>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -86,7 +88,9 @@ const Ask = ({}) => {
                           <p className={Styles.text}>شماره پشتیبانی باجت:</p>
                         </div>
                         <div>
-                          <p className={Styles.phone}>۰۲۱ - 25961300</p>
+                          <p className={Styles.phone}>
+                            <a href="tel:02125961300">۰۲۱ - 25961300</a>
+                          </p>
                         </div>
                       </div>
                     </div>

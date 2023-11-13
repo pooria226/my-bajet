@@ -22,6 +22,7 @@ const OpenAccountIndex = () => {
 
   return (
     <MainLayotus
+      title={"اپلیکیشن باجت | افتتاح حساب آنلاین"}
       header={
         <Header
           onOpen={() =>

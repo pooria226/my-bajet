@@ -7,6 +7,7 @@ import ImageProvider from "@/provider/ImageProvider";
 import CloudDownload from "@/public/assets/images/svgs/cloud-download.svg";
 import VerifiedUser from "@/public/assets/images/svgs/verified-user.svg";
 import BoltIcon from "@/public/assets/images/svgs/bolt.svg";
+import BajeetIcon from "@/public/assets/images/svgs/bajeet.svg";
 
 import Styles from "./styles.module.scss";
 import Wrapper from "../Wrapper";
@@ -53,7 +54,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-x-2 gap-y-4">
-                  <Button>تسهیلات اسنوا</Button>
+                  <Button>تسهیلات انتخابی نو</Button>
                   <Button>تسهیلات آسان باجت (تاب)</Button>
                   <Button onClick={() => router.push("marriage")}>
                     وام ازدواج
@@ -62,7 +63,9 @@ const Services = () => {
                   <Button onClick={() => router.push("/bnpl")}>
                     خدمات اعتباری (BNPL)
                   </Button>
-                  <Button disabled={true}>سفته الکترونیک (به زودی)</Button>
+                  <Button disabled={true}>
+                    اعتبار اقساطی کالانو (به زودی)
+                  </Button>
                 </div>
               </div>
             </div>
@@ -122,7 +125,7 @@ const Services = () => {
           <div className="grid grid-cols-12">
             <div
               data-aos="fade-up"
-              className={`${Styles.paddingContainerEnd} md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-end justify-center`}
+              className={`${Styles.paddingContainerEnd} md:order-0 order-1 md:col-span-6 md:pt-0 pt-10 col-span-12 flex md:justify-end justify-center`}
             >
               <ImageProvider
                 classes={"image-res"}
@@ -133,7 +136,7 @@ const Services = () => {
             </div>
             <div
               data-aos="fade-down"
-              className="md:col-span-6 col-span-12 flex flex-col justify-center items-start "
+              className=" md:order-1 order-0 md:col-span-6 col-span-12 flex flex-col justify-center items-start"
             >
               <div>
                 <div className={Styles.wrapping}>
@@ -226,7 +229,7 @@ const Services = () => {
                     <BoltIcon />
                   </div>
                   <div className="ps-2 md:mt-0 mt-2">
-                    <p className={Styles.text}>
+                    <p className={`${Styles.text} text-center`}>
                       دریافت انواع تسهیلات به‌صورت آنلاین در کمترین زمان
                     </p>
                   </div>
@@ -236,7 +239,7 @@ const Services = () => {
             <div className="lg:col-span-4 md:col-span-6 col-span-12 flex items-center justify-between md:pt-0 pt-14">
               <div className="flex flex-col justify-end md:items-end items-center w-full">
                 <div>
-                  <Link href={appConfig.cafebazaarAppUrl}>
+                  <Link target="_blank" href={appConfig.cafebazaarAppUrl}>
                     <ImageProvider
                       height={"40px"}
                       width={135}
@@ -246,7 +249,7 @@ const Services = () => {
                   </Link>
                 </div>
                 <div className="pt-2">
-                  <Link href={appConfig.myketAppUrl}>
+                  <Link target="_blank" href={appConfig.myketAppUrl}>
                     <ImageProvider
                       height={"40px"}
                       width={135}
@@ -257,12 +260,7 @@ const Services = () => {
                 </div>
                 <div className="pt-2">
                   <Link href={appConfig.appUrl}>
-                    <ImageProvider
-                      width={135}
-                      height={"40px"}
-                      aspectRatio={135 / 40}
-                      src={"/assets/images/svgs/bajeet.svg"}
-                    />
+                    <BajeetIcon />
                   </Link>
                 </div>
               </div>

@@ -46,7 +46,7 @@ const MarriageStep = () => {
                       به اتمام رسانید.
                     </p>
                   </div>
-                  <div className="pt-6">
+                  <div className="md:pt-6 pt-4">
                     <Link target="_blank" href={appConfig.centeralBankUrl}>
                       <Button className={Styles.btnBank}>
                         <span className="pe-2">
@@ -76,7 +76,7 @@ const MarriageStep = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="pt-6">
+                  <div className="md:pt-6 pt-4">
                     <Link href={appConfig.appUrl}>
                       <Button className={Styles.btnBank}>
                         <span className="pe-2">
@@ -129,9 +129,9 @@ const MarriageStep = () => {
                         پس از استعلام از سامانه بانک مرکزی و نیز پرداخت
                         کارمزدهای پرونده تسهیلاتی، رتبه اعتباری شما در شبکه
                         بانکی نمایش داده می‌شود. این رتبه اعتباری، ملاک تعداد
-                        ضامن‌های موردنیاز برای معرفی و شرایط آنهاست. در ادامه
+                        ضامن‌های مورد نیاز برای معرفی و شرایط آنهاست. در ادامه
                         باید بر روی حساب مورد نظر کلیک کرده و اگر حساب قرض
-                        الحسنه باجتی نداشته باشید با کلیک بر روی اقتتاح حساب
+                        الحسنه باجتی نداشته باشید با کلیک بر روی افتتاح حساب
                         ادامه فرآیند را انجام دهید.
                       </p>
                     </div>

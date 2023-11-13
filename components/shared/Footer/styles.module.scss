@@ -2,8 +2,8 @@
   margin-top: 24px;
   .title {
     color: #1a1c1f;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
     line-height: 20px;
     height: 48px;
     display: flex;
@@ -95,8 +95,8 @@
   }
   [class~="ant-collapse-header-text"] {
     color: #1a1c1f;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 15px;
     line-height: 20px;
   }
   [class~="ant-collapse-content-box"] {
@@ -186,6 +186,12 @@
 .textFooter {
   color: #44474e;
   font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+}
+.version {
+  color: #1a1c1f;
+  font-weight: 500;
   font-size: 10px;
   line-height: 16px;
 }

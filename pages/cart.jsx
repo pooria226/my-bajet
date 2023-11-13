@@ -22,6 +22,7 @@ const CartIndex = () => {
 
   return (
     <MainLayotus
+      title={"اپلیکیشن باجت | خدمات کارت"}
       header={
         <Header
           onOpen={() =>

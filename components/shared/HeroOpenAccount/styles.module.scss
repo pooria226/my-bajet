@@ -2,9 +2,9 @@
   position: relative;
   .footer {
     position: absolute;
-    bottom: 83px;
+    bottom: 124px;
     left: 120px;
-    height: 328px;
+    height: 252px;
     width: 528px;
     .title {
       color: #001b3f;
@@ -51,7 +51,7 @@
       position: absolute;
       bottom: 30px;
       left: 120px;
-      height: 328px;
+      height: 252px;
       width: 528px;
       .title {
         color: #001b3f;
@@ -98,8 +98,8 @@
       position: absolute;
       bottom: 40px;
       left: 60px;
-      height: 284px;
-      width: 528px;
+      height: 252px;
+      width: 428px;
       .title {
         color: #001b3f;
         font-weight: 700;
@@ -242,13 +242,13 @@
       position: absolute;
       bottom: 40px;
       left: 16px;
-      height: 248px;
+      height: 173px;
       width: calc(100% - 32px);
       .title {
         color: #001b3f;
         font-weight: 600;
         font-size: 24px;
-        line-height: 40px;
+        line-height: 40.5px;
         margin-bottom: 0px;
       }
       .text {
@@ -257,7 +257,7 @@
         font-size: 14px;
         margin-top: 0px;
         line-height: 28px;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
         &:last-child {
           margin-bottom: 0px;
         }

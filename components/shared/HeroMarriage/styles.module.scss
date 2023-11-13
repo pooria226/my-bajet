@@ -2,9 +2,9 @@
   position: relative;
   .footer {
     position: absolute;
-    bottom: 83px;
     left: 120px;
-    height: 328px;
+    bottom: 146px;
+    height: 208px;
     width: 528px;
     .title {
       color: #001b3f;
@@ -19,7 +19,6 @@
       font-size: 16px;
       margin-top: 0px;
       line-height: 28px;
-      margin-bottom: 8px;
     }
     .badge {
       margin-top: 24px;
@@ -49,7 +48,7 @@
       }
     }
     .badgePrice {
-      margin-top: 24px;
+      margin-top: 16px;
       background-color: #f5faff;
       height: 52px;
       display: flex;
@@ -83,15 +82,15 @@
     position: relative;
     .footer {
       position: absolute;
-      bottom: 30px;
       left: 120px;
-      height: 328px;
+      bottom: 120px;
+      height: 208px;
       width: 528px;
       .title {
         color: #001b3f;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 44px;
+        line-height: 64px;
         margin-bottom: 0px;
       }
       .text {
@@ -157,15 +156,15 @@
     position: relative;
     .footer {
       position: absolute;
-      bottom: 40px;
       left: 60px;
-      height: 284px;
-      width: 528px;
+      bottom: 80px;
+      height: 208px;
+      width: 468px;
       .title {
         color: #001b3f;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 44px;
+        line-height: 64px;
         margin-bottom: 0px;
       }
       .text {
@@ -232,10 +231,10 @@
     position: relative;
     .footer {
       position: absolute;
-      bottom: 16px;
       left: 60px;
-      height: 258px;
-      width: 446px;
+      bottom: 40px;
+      height: 145px;
+      width: 340px;
       .title {
         color: #001b3f;
         font-weight: 700;
@@ -302,16 +301,14 @@
   }
 }
 
-
-
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .wrapper {
     position: relative;
     .footer {
       position: absolute;
       bottom: 40px;
       left: 16px;
-      height: 303px;
+      height: 145px;
       width: calc(100% - 32px);
       .title {
         color: #001b3f;
@@ -372,9 +369,9 @@
           [class~="riyal"] {
             color: #44474e !important;
             font-weight: 500;
-            font-size: 24px;
-            line-height: 31.2px;
-            padding-inline-start: 2.5px;
+            font-size: 20px;
+            line-height: 26px;
+            padding-inline-start: 4px;
           }
         }
       }

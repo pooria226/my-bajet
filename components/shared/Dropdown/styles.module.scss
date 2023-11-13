@@ -12,3 +12,20 @@
     border-radius: 20px;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .link {
+    color: #1a1c1f;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    // padding: 10px 4px 10px 4px;
+    display: flex;
+
+    &:hover {
+      background-color: #44474e14;
+      border-radius: 20px;
+    }
+  }
+}

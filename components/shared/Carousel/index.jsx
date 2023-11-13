@@ -10,11 +10,11 @@ import "swiper/css";
 
 const Carousel = () => {
   const [swiper, setSwiper] = useState();
-  const slideTo = () => swiper.slideTo(3, 400);
+  const slideTo = () => swiper.slideTo(4, 400);
 
   useEffect(() => {
     if (swiper != null) slideTo();
-  }, []);
+  }, [swiper]);
 
   return (
     <Wrapper>
@@ -24,6 +24,7 @@ const Carousel = () => {
         </div>
         <div style={{ height: 212 }} className="py-4 cursor-grabbing">
           <Swiper
+            draggable={false}
             modules={[Autoplay]}
             onSwiper={setSwiper}
             spaceBetween={34}
@@ -57,7 +58,7 @@ const Carousel = () => {
           >
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -72,7 +73,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -87,7 +88,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -102,7 +103,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -163,7 +164,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -178,7 +179,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -193,7 +194,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}
@@ -208,7 +209,7 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <div className={`${Styles.item} item-swiper`}>
+                <div className={`${Styles.itemDisabled} item-swiper`}>
                   <ImageProvider
                     aspectRatio={56 / 56}
                     width={56}

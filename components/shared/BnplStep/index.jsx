@@ -53,7 +53,7 @@ const BnplStep = () => {
                           title: "شخصی",
                           body: "با بررسی رتبه اعتبارسنجی بانکی و میانگین موجودی حساب تجارتی شما، اعتباری تا سقف 50 و یا 100 میلیون ریال به شما تخصیص داده خواهد شد. با امضای قرارداد در اپلیکیشن باجت، امکان دریافت اعتبار را خواهید داشت.",
                           footer: (
-                            <div className="flex md:flex-row flex-col justify-between items-center gap-2">
+                            <div className="flex md:flex-row flex-col justify-between items-center gap-x-2 gap-y-4">
                               <Button className={Styles.btnDownload}>
                                 <Link
                                   className="flex px-12 py-3"
@@ -68,7 +68,6 @@ const BnplStep = () => {
                                   <p className="ps-2">دانلود باجت</p>
                                 </Link>
                               </Button>
-
                               <Button className={Styles.course}>
                                 <Link
                                   className="flex px-12 py-3"
@@ -133,12 +132,12 @@ const BnplStep = () => {
                       </p>
                     </div>
                     <div className="md:pt-5 pt-4">
-                      <div className="flex md:flex-row flex-col justify-between items-center gap-2">
-                        <Button className={Styles.btnDownload}>
+                      <div className="flex md:flex-row flex-col justify-end items-center gap-2">
+                        {/* <Button className={Styles.btnDownload}>
                           <Link className="flex px-12 py-3" href={"/store"}>
                             <p>صفحه فروشگاه‌ها</p>
                           </Link>
-                        </Button>
+                        </Button> */}
                         <Button className={Styles.course}>
                           <Link
                             style={{ borderRadius: 20 }}

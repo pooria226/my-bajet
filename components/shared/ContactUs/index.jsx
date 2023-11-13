@@ -34,42 +34,39 @@ const ContactUs = ({}) => {
           </div>
 
           <div>
-            <div
-              onClick={() =>
-                window.open(
-                  "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods",
-                  "Popup",
-                  "toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30"
-                )
-              }
-              href={
-                "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods"
-              }
-            >
-              <ImageProvider
-                width={80}
-                aspectRatio={80 / 80}
-                src={
-                  "https://logo.samandehi.ir/logo.aspx?id=320024&p=qftiodrflymalymaodrfshwl"
+            <div>
+              <img
+                style={{ width: 80, height: 80 }}
+                referrerPolicy="origin"
+                id="rgvjnbqeesgtesgtnbqewlao"
+                onClick={() =>
+                  window.open(
+                    "https://logo.samandehi.ir/Verify.aspx?id=320024&p=xlaouiwkobpdobpduiwkaods",
+                    "Popup",
+                    "toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30"
+                  )
                 }
+                alt="logo-samandehi"
+                src="https://logo.samandehi.ir/logo.aspx?id=320024&p=qftiodrflymalymaodrfshwl"
+                className="ecommerce-certificate"
               />
             </div>
           </div>
           <div>
-            <Link
+            <a
+              referrerPolicy="origin"
               target="_blank"
-              href={
-                "https://trustseal.enamad.ir/?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
-              }
+              href="https://trustseal.enamad.ir/?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
             >
-              <ImageProvider
-                width={80}
-                aspectRatio={80 / 80}
-                src={
-                  "https://Trustseal.eNamad.ir/logo.aspx?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
-                }
+              <img
+                style={{ width: 80, height: 80 }}
+                referrerPolicy="origin"
+                src="https://Trustseal.eNamad.ir/logo.aspx?id=307518&amp;Code=rK0pdm9REhlwQL5nbhau"
+                alt=""
+                id="rK0pdm9REhlwQL5nbhau"
+                className="ecommerce-certificate"
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

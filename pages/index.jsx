@@ -10,6 +10,7 @@ const Index = () => {
   });
   return (
     <MainLayotus
+      title="اپلیکیشن باجت | ارائه دهنده خرید اعتباری bnpl، تسهیلات خرد و تسهیلات غیر حضوری ازدواج بانک تجارت"
       header={
         <Header
           onOpen={() =>

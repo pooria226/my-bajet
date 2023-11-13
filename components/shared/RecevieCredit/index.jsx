@@ -94,11 +94,11 @@ const RecevieCredit = ({}) => {
               <div className="flex justify-center pt-2">
                 <p className={Styles.item}>نیاز به حساب فعال تجارت</p>
               </div>
-              <div className="flex justify-between px-8 pt-2">
-                <div>
+              <div className="flex justify-between pt-2">
+                <div className="w-1/2 flex justify-center">
                   <CheckIcon />
                 </div>
-                <div>
+                <div className="w-1/2 flex justify-center">
                   <CheckIcon />
                 </div>
               </div>
@@ -108,11 +108,11 @@ const RecevieCredit = ({}) => {
               <div className="flex justify-center pt-2">
                 <p className={Styles.item}>نیاز به کارت پایان خدمت</p>
               </div>
-              <div className="flex justify-between px-8 pt-2">
-                <div>
+              <div className="flex justify-between pt-2">
+                <div className="w-1/2 flex justify-center">
                   <CheckIcon />
                 </div>
-                <div>
+                <div className="w-1/2 flex justify-center">
                   <CloseIcon />
                 </div>
               </div>
@@ -124,11 +124,11 @@ const RecevieCredit = ({}) => {
                   محاسبه اعتبار بر اساس رتبه اعتباری و میانگین موجودی حساب
                 </p>
               </div>
-              <div className="flex justify-between px-8 pt-2">
-                <div>
+              <div className="flex justify-between  pt-2">
+                <div className="w-1/2 flex justify-center">
                   <CheckIcon />
                 </div>
-                <div>
+                <div className="w-1/2 flex justify-center">
                   <CloseIcon />
                 </div>
               </div>

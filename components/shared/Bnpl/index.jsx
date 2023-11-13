@@ -18,6 +18,7 @@ const Bnpl = ({ faqData, advantagesCredit }) => {
       <div>
         <AdvantagesCredit
           title={"مزایای استفاده از اعتبار باجت"}
+          titleMobile={"مزایای استفاده از اعتبار باجت"}
           data={advantagesCredit}
         />
       </div>

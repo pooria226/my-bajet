@@ -6,7 +6,7 @@ import MainLayotus from "@/components/layouts/MainLayouts";
 import BreadCrumbItem from "@/components/shared/BreadCrumb";
 import Footer from "@/components/shared/Footer";
 import Marriage from "@/components/shared/Marriage";
-import { marriageFaqData, openAccountFaqData } from "@/utils/data";
+import { marriageFaqData } from "@/utils/data";
 
 import AcuteIcon from "@/public/assets/images/svgs/acute.svg";
 import TransportationIcon from "@/public/assets/images/svgs/transportation.svg";
@@ -50,6 +50,7 @@ const MarriageIndex = () => {
 
   return (
     <MainLayotus
+      title={"اپلیکیشن باجت | تسهیلات ازدواج"}
       header={
         <Header
           onOpen={() =>

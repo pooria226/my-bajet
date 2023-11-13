@@ -12,6 +12,7 @@ const HeroBnpl = ({}) => {
     <div className={Styles.wrapper}>
       <div className="md:block hidden">
         <Image
+          priority={true}
           alt=""
           height={553}
           width={1440}
@@ -21,6 +22,7 @@ const HeroBnpl = ({}) => {
       <div className="md:hidden block">
         <div>
           <ImageProvider
+            priority={true}
             classes={"image-res"}
             aspectRatio={360 / 880}
             width={"100%"}
@@ -60,12 +62,12 @@ const HeroBnpl = ({}) => {
             دریافت اعتبار از باجت
           </Button> */}
 
-          <Button
+          {/* <Button
             onClick={() => router.push("/store")}
             className={`${Styles.credit} md:order-1 order-0`}
           >
             مشاهده صفحه فروشگاه‌ها
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>

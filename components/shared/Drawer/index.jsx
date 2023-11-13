@@ -1,4 +1,4 @@
-import { Collapse, Drawer } from "antd";
+import { Button, Collapse, Drawer } from "antd";
 import { useState } from "react";
 import ImageProvider from "@/provider/ImageProvider";
 
@@ -12,6 +12,7 @@ import TejartIcon from "@/public/assets/images/svgs/tejart-drawer.svg";
 import SimorqIcon from "@/public/assets/images/svgs/simorq-drawer.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { appConfig } from "@/app-config";
 
 const DrawerItem = ({ onClose, open }) => {
   const router = useRouter();
@@ -21,13 +22,16 @@ const DrawerItem = ({ onClose, open }) => {
       styles={{ header: { display: "none" } }}
       onClose={onClose}
       open={open}
+      rootClassName="drawer-menu"
     >
       <div className="py-7 px-4">
-        <ImageProvider
-          width={95}
-          aspectRatio={95 / 20}
-          src={"/assets/images/svgs/logo-type.svg"}
-        />
+        <Link href={"/"}>
+          <ImageProvider
+            width={95}
+            aspectRatio={95 / 20}
+            src={"/assets/images/svgs/logo-type.svg"}
+          />
+        </Link>
       </div>
       <div className="pt-10">
         <Link href={"/"}>
@@ -39,7 +43,13 @@ const DrawerItem = ({ onClose, open }) => {
           </div>
         </Link>
         <div className={Styles.wrapperCollapse}>
-          <div className={router.route == "/bnpl" ? Styles.activate : ""}>
+          <div
+            className={
+              router.route == "/bnpl" || router.route == "/marriage"
+                ? Styles.activate
+                : ""
+            }
+          >
             <Collapse
               expandIcon={() => {
                 return <span></span>;
@@ -73,6 +83,17 @@ const DrawerItem = ({ onClose, open }) => {
                           <p>خدمات اعتباری (BNPL)</p>
                         </div>
                       </Link>
+                      <Link href={"/credit-loan"}>
+                        <div
+                          className={
+                            router.route == "/credit-loan"
+                              ? Styles.itemActive
+                              : Styles.item
+                          }
+                        >
+                          <p>اعتبار اقساطی پاکشوما</p>
+                        </div>
+                      </Link>
                     </div>
                   ),
                   extra: (
@@ -84,7 +105,13 @@ const DrawerItem = ({ onClose, open }) => {
               ]}
             />
           </div>
-          <div className={router.route == "/cart" ? Styles.activate : ""}>
+          <div
+            className={
+              router.route == "/cart" || router.route == "/open-account"
+                ? Styles.activate
+                : ""
+            }
+          >
             <Collapse
               expandIcon={() => {
                 return <span></span>;
@@ -131,9 +158,24 @@ const DrawerItem = ({ onClose, open }) => {
           </div>
         </div>
       </div>
-      <div className={`${Styles.footer} gap-10`}>
-        <TejartIcon />
-        <SimorqIcon />
+      <div className={`${Styles.footer} flex-col items-center`}>
+        <div className="pb-2 w-full">
+          <Link href={appConfig.appUrl}>
+            <Button className={Styles.btnDownload}>دانلود باجت</Button>
+          </Link>
+        </div>
+        <div className="pb-4">
+          <p className={Styles.version}>ورژن: {appConfig.appVersion}</p>
+        </div>
+        <div
+          style={{
+            height: 40,
+          }}
+          className="flex items-center gap-10 pb-2"
+        >
+          <TejartIcon />
+          <SimorqIcon />
+        </div>
       </div>
     </Drawer>
   );

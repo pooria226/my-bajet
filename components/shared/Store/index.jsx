@@ -13,17 +13,16 @@ import FilterIcon from "@/public/assets/images/svgs/filter-alt.svg";
 import ExpandMore from "@/public/assets/images/svgs/expand-more.svg";
 import ExpandLess from "@/public/assets/images/svgs/expand-less.svg";
 import FilterDeactive from "@/public/assets/images/svgs/filter-alt-deactive.svg";
+import FilterDrawer from "../FilterDrawer";
 
-const Store = () => {
-  const [inputs, setInputs] = useState({
-    acceptors: [],
-    categories: [],
-  });
-
-  const onChange = (key) => {
-    console.log(key);
-  };
-
+const Store = ({
+  setInputs,
+  inputs,
+  handleSelectCategory,
+  handleResetFilter,
+  handleTabChange,
+  handleApplyFilterMobile,
+}) => {
   const items = [
     {
       key: "1",
@@ -31,389 +30,64 @@ const Store = () => {
       children: (
         <div>
           <div className="flex gap-2 pb-4 px-4">
-            <div style={{ width: "82%" }}>
-              <Search />
+            <div style={{ width: "calc(100% - 56px)" }}>
+              <Search
+                value={inputs?.shopName}
+                onChange={setInputs}
+                name="shopName"
+              />
             </div>
-            <div style={{ width: "18%" }}>
-              <Button className={Styles.filterDiactive}>
+            <div style={{ width: 56 }}>
+              <Button
+                onClick={() =>
+                  setInputs((prev) => {
+                    return { ...prev, filterDrawer: true };
+                  })
+                }
+                className={Styles.filterDiactive}
+              >
                 <FilterDeactive />
               </Button>
             </div>
           </div>
           <div className={Styles.list}>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
+            {inputs.localData?.shopDtoList?.map((item, index) => {
+              return (
+                <div key={index} className={Styles.item}>
+                  <div className="flex gap-3">
+                    <div>
+                      <ImageProvider
+                        aspectRatio={1 / 1}
+                        width={48}
+                        height={48}
+                        src={item?.logo || "/"}
+                      />
+                    </div>
+                    <div>
+                      <p className={Styles.title}>{item?.title}</p>
+                      <p className={Styles.text}>{item?.categoryTitle}</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
-            <div className={Styles.item}>
-              <div className="flex gap-3">
-                <div>
-                  <ImageProvider
-                    aspectRatio={1 / 1}
-                    width={48}
-                    height={48}
-                    src={"/assets/images/svgs/store.svg"}
-                  />
-                </div>
-                <div>
-                  <p className={Styles.title}>افق کوروش</p>
-                  <p className={Styles.text}>کالای مصرفی</p>
-                </div>
-              </div>
-            </div>
+              );
+            })}
             <div
               style={{ height: 56 }}
               className="flex justify-center items-center py-2"
             >
-              <Button className={Styles.btnMore}>مشاهده بیشتر</Button>
+              <Button
+                disabled={
+                  Math.ceil(inputs?.localData?.count / 12) == inputs.pageNo
+                }
+                onClick={() =>
+                  setInputs((prev) => {
+                    return { ...prev, pageNo: prev.pageNo + 1 };
+                  })
+                }
+                className={Styles.btnMore}
+              >
+                مشاهده بیشتر
+              </Button>
             </div>
           </div>
         </div>
@@ -422,7 +96,64 @@ const Store = () => {
     {
       key: "2",
       label: "پذیرندگان حضوری",
-      children: "Content of Tab Pane 2",
+      children: (
+        <div>
+          <div className="flex gap-2 pb-4 px-4">
+            <div style={{ width: "calc(100% - 56px)" }}>
+              <Search
+                value={inputs?.shopName}
+                onChange={setInputs}
+                name="shopName"
+              />
+            </div>
+            <div style={{ width: 56 }}>
+              <Button className={Styles.filterDiactive}>
+                <FilterDeactive />
+              </Button>
+            </div>
+          </div>
+          <div className={Styles.list}>
+            {inputs.localData?.shopDtoList?.map((item, index) => {
+              return (
+                <div key={index} className={Styles.item}>
+                  <div className="flex gap-3">
+                    <div>
+                      <ImageProvider
+                        aspectRatio={1 / 1}
+                        width={48}
+                        height={48}
+                        src={item?.logo || "/"}
+                      />
+                    </div>
+                    <div>
+                      <p className={Styles.title}>{item?.title}</p>
+                      <p className={Styles.text}>{item?.categoryTitle}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <div
+              style={{ height: 56 }}
+              className="flex justify-center items-center py-2"
+            >
+              <Button
+                disabled={
+                  Math.ceil(inputs?.localData?.count / 12) == inputs.pageNo
+                }
+                onClick={() =>
+                  setInputs((prev) => {
+                    return { ...prev, pageNo: prev.pageNo + 1 };
+                  })
+                }
+                className={Styles.btnMore}
+              >
+                مشاهده بیشتر
+              </Button>
+            </div>
+          </div>
+        </div>
+      ),
     },
   ];
 
@@ -446,9 +177,17 @@ const Store = () => {
                         <p>فیلتر</p>
                       </div>
                     </div>
-                    <div>
-                      <Button className={Styles.btnDelete}>حذف فیلتر</Button>
-                    </div>
+                    {inputs?.type != "BOTH" ||
+                    inputs?.shopCategoryCodes.length > 0 ? (
+                      <div>
+                        <Button
+                          onClick={() => handleResetFilter()}
+                          className={Styles.btnDelete}
+                        >
+                          حذف فیلتر
+                        </Button>
+                      </div>
+                    ) : null}
                   </div>
                   <div>
                     <Collapse
@@ -475,19 +214,77 @@ const Store = () => {
                           label: "پذیرندگان",
                           children: (
                             <div className="flex flex-wrap gap-x-2 gap-y-4">
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
+                              <Button
+                                className={
+                                  inputs.type == "BOTH"
+                                    ? Styles.btnFilterActive
+                                    : Styles.btnFilter
+                                }
+                                onClick={() =>
+                                  setInputs((prev) => {
+                                    return { ...prev, type: "BOTH" };
+                                  })
+                                }
+                              >
+                                {inputs.type == "BOTH" ? (
+                                  <span className="pe-2">
+                                    <ImageProvider
+                                      width={18}
+                                      height={18}
+                                      aspectRatio={18 / 18}
+                                      src={"/assets/images/svgs/check.svg"}
+                                    />
+                                  </span>
+                                ) : null}
+                                <span>همه</span>
+                              </Button>
+                              <Button
+                                className={
+                                  inputs.type == "OFFLINE"
+                                    ? Styles.btnFilterActive
+                                    : Styles.btnFilter
+                                }
+                                onClick={() =>
+                                  setInputs((prev) => {
+                                    return { ...prev, type: "OFFLINE" };
+                                  })
+                                }
+                              >
+                                {inputs.type == "OFFLINE" ? (
+                                  <span className="pe-2">
+                                    <ImageProvider
+                                      width={18}
+                                      height={18}
+                                      aspectRatio={18 / 18}
+                                      src={"/assets/images/svgs/check.svg"}
+                                    />
+                                  </span>
+                                ) : null}
                                 <span>حضوری</span>
                               </Button>
-                              <Button className={Styles.btnFilter}>
-                                آنلاین
+                              <Button
+                                onClick={() =>
+                                  setInputs((prev) => {
+                                    return { ...prev, type: "ONLINE" };
+                                  })
+                                }
+                                className={
+                                  inputs.type == "ONLINE"
+                                    ? Styles.btnFilterActive
+                                    : Styles.btnFilter
+                                }
+                              >
+                                {inputs.type == "ONLINE" ? (
+                                  <span className="pe-2">
+                                    <ImageProvider
+                                      width={18}
+                                      height={18}
+                                      aspectRatio={18 / 18}
+                                      src={"/assets/images/svgs/check.svg"}
+                                    />
+                                  </span>
+                                ) : null}
+                                <span>آنلاین</span>
                               </Button>
                             </div>
                           ),
@@ -518,131 +315,49 @@ const Store = () => {
                           label: "دسته بندی فروشگاه‌ها",
                           children: (
                             <div className="flex flex-wrap gap-x-2 gap-y-4">
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
-                              <Button className={Styles.btnFilterActive}>
-                                <span className="pe-2">
-                                  <ImageProvider
-                                    width={18}
-                                    height={18}
-                                    aspectRatio={18 / 18}
-                                    src={"/assets/images/svgs/check.svg"}
-                                  />
-                                </span>
-                                <span>بیمه</span>
-                              </Button>
-                              <Button className={Styles.btnFilter}>
-                                مد و پوشاک
-                              </Button>
+                              {Object.keys(
+                                inputs?.categoryData?.categoryDtos
+                              ).map((keyName, index) => {
+                                return (
+                                  <Button
+                                    key={index}
+                                    className={
+                                      inputs?.categoryData?.categoryDtos[
+                                        keyName
+                                      ].selected
+                                        ? Styles.btnFilterActive
+                                        : Styles.btnFilter
+                                    }
+                                    onClick={() =>
+                                      handleSelectCategory(keyName)
+                                    }
+                                  >
+                                    {inputs?.categoryData?.categoryDtos[keyName]
+                                      .selected ? (
+                                      <span className="pe-2">
+                                        <ImageProvider
+                                          width={18}
+                                          height={18}
+                                          aspectRatio={18 / 18}
+                                          src={"/assets/images/svgs/check.svg"}
+                                        />
+                                      </span>
+                                    ) : null}
+                                    <span>
+                                      {
+                                        inputs?.categoryData?.categoryDtos[
+                                          keyName
+                                        ].name
+                                      }
+                                    </span>
+                                  </Button>
+                                );
+                              })}
                             </div>
                           ),
                         },
                       ]}
                     />
-                    {inputs.acceptors.length > 0 ||
-                    inputs.categories.length > 0 ? (
-                      <div>
-                        <Button className={Styles.btnAddFilter}>
-                          اعمال فیلتر
-                        </Button>
-                      </div>
-                    ) : null}
                   </div>
                 </div>
               </div>
@@ -655,71 +370,46 @@ const Store = () => {
                           <p className={Styles.storeTitle}>فروشگاه‌ها</p>
                         </div>
                         <div>
-                          <p className={Styles.storeText}>267 عدد</p>
+                          <p className={Styles.storeText}>
+                            {inputs.localData?.count} عدد
+                          </p>
                         </div>
                       </div>
                     </div>
                     <div className="col-span-6">
-                      <Search />
+                      <Search
+                        value={inputs?.shopName}
+                        onChange={setInputs}
+                        name="shopName"
+                      />
                     </div>
                   </div>
                   <div className="grid grid-cols-12 gap-4">
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
-                    <div className="lg:col-span-6 md:col-span-12 col-span-12">
-                      <StoreCard />
-                    </div>
+                    {inputs.localData?.shopDtoList?.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className="lg:col-span-6 md:col-span-12 col-span-12"
+                        >
+                          <StoreCard data={item} />
+                        </div>
+                      );
+                    })}
                     <div className="col-span-12">
-                      <Button className={Styles.btnMore}>مشاهده بیشتر</Button>
+                      <Button
+                        disabled={
+                          Math.ceil(inputs?.localData?.count / 12) ==
+                          inputs.pageNo
+                        }
+                        onClick={() =>
+                          setInputs((prev) => {
+                            return { ...prev, pageNo: prev.pageNo + 1 };
+                          })
+                        }
+                        className={Styles.btnMore}
+                      >
+                        مشاهده بیشتر
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -729,7 +419,23 @@ const Store = () => {
         </div>
         <div className="md:hidden block">
           <div>
-            <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+            <Tabs
+              defaultActiveKey="1"
+              items={items}
+              onChange={handleTabChange}
+            />
+            <FilterDrawer
+              inputs={inputs}
+              onClose={() =>
+                setInputs((prev) => {
+                  return { ...prev, filterDrawer: false };
+                })
+              }
+              open={inputs.filterDrawer}
+              handleSelectCategory={handleSelectCategory}
+              handleResetFilter={handleResetFilter}
+              handleApplyFilterMobile={handleApplyFilterMobile}
+            />
           </div>
         </div>
       </div>

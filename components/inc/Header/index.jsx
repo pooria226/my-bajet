@@ -13,6 +13,7 @@ import MenuIcon from "@/public/assets/images/svgs/menu.svg";
 import BajetTypeIcon from "@/public/assets/images/svgs/bajet-type.svg";
 
 import Styles from "./styles.module.scss";
+import { appConfig } from "@/app-config";
 
 const Header = ({ onOpen, open, onClose }) => {
   const [inputs, setInputs] = useState({
@@ -66,6 +67,14 @@ const Header = ({ onOpen, open, onClose }) => {
                           label: <Link href="/bnpl">خدمات اعتباری (BNPL)</Link>,
                           key: "1",
                         },
+                        {
+                          label: (
+                            <Link href="/credit-loan">
+                              اعتبار اقساطی پاکشوما
+                            </Link>
+                          ),
+                          key: "2",
+                        },
                       ]}
                     />
                   </div>
@@ -86,7 +95,11 @@ const Header = ({ onOpen, open, onClose }) => {
                   </div>
                 </div>
               </div>
-              <div></div>
+              <div>
+                <Link href={appConfig.appUrl}>
+                  <Button className={Styles.buttons}>دانلود باجت</Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -98,7 +111,9 @@ const Header = ({ onOpen, open, onClose }) => {
               </Button>
             </div>
             <div>
-              <BajetTypeIcon />
+              <Link href={"/"}>
+                <BajetTypeIcon />
+              </Link>
             </div>
           </div>
         </div>

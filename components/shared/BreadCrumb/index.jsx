@@ -22,7 +22,6 @@ const BreadCrumbItem = ({ items = [] }) => {
             return { ...prev, fixed: false };
           });
         } else if (st < lastScrollTop) {
-          console.log("dssss");
           if (window.scrollY > 200) {
             setInputs((prev) => {
               return { ...prev, fixed: true };

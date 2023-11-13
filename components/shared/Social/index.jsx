@@ -12,6 +12,7 @@ import TelegramIcon from "@/public/assets/images/svgs/telegram.svg";
 import TwitterIcon from "@/public/assets/images/svgs/twitter.svg";
 import SimorqIcon from "@/public/assets/images/svgs/simorq.svg";
 import TejartLogoIcon from "@/public/assets/images/svgs/tejart-logo.svg";
+import { appConfig } from "@/app-config";
 
 const Social = ({}) => {
   return (
@@ -30,25 +31,46 @@ const Social = ({}) => {
           </Link>
         </div>
         <div className="flex gap-2">
-          <Link className={Styles.link} href={"https://Instagram.com/mybajet"}>
+          <Link
+            target="_blank"
+            className={Styles.link}
+            href={"https://Instagram.com/mybajet"}
+          >
             <InstagramIcon />
           </Link>
           <Link
+            target="_blank"
             className={Styles.link}
             href={"https://linkedin.com/company/mybajet"}
           >
             <LinkedinIcon />
           </Link>
-          <Link className={Styles.link} href={"https://ble.ir/mybajet"}>
+          <Link
+            target="_blank"
+            className={Styles.link}
+            href={"https://ble.ir/mybajet"}
+          >
             <BaleIcon />
           </Link>{" "}
-          <Link className={Styles.link} href={"#"}>
+          <Link
+            target="_blank"
+            className={Styles.link}
+            href={"https://www.aparat.com/mybajet"}
+          >
             <AparatIcon />
           </Link>
-          <Link className={Styles.link} href={"https://t.me/mybajet"}>
+          <Link
+            target="_blank"
+            className={Styles.link}
+            href={"https://t.me/mybajet"}
+          >
             <TelegramIcon />
           </Link>
-          <Link className={Styles.link} href={"https://Twitter.com/mybajet_ir"}>
+          <Link
+            target="_blank"
+            className={Styles.link}
+            href={"https://Twitter.com/mybajet_ir"}
+          >
             <TwitterIcon />
           </Link>
         </div>
@@ -60,7 +82,10 @@ const Social = ({}) => {
             کلیه حقوق این سایت متعلق به شرکت سامانه‌های یکپارچه سیمرغ تجارت است.
           </p>
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-4">
+          <div className="flex justify-center items-center pe-2">
+            <p className={Styles.version}>ورژن: {appConfig.appVersion}</p>
+          </div>
           <div>
             <TejartLogoIcon />
           </div>

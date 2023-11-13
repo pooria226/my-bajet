@@ -13,12 +13,14 @@ const Help = ({ text }) => {
               <div className="flex justify-between items-center pe-10 ps-14">
                 <div>
                   <p className={Stlyes.title}>نیاز به کمک داری؟</p>
-                  <p className={Stlyes.subTitle}>{text}</p>
+                  <p className={Stlyes.subTitle}>پشتیبانی در کنار شماست</p>
                 </div>
                 <div className="flex items-center">
                   <div>
                     <p className={Stlyes.text}>تلفن :</p>
-                    <p className={Stlyes.text}>021 - 25961300</p>
+                    <p style={{ direction: "ltr" }} className={Stlyes.text}>
+                      021 - 25961300
+                    </p>
                   </div>
                   <div className="ps-8 pt-1 pb-1">
                     <ImageProvider
@@ -37,7 +39,7 @@ const Help = ({ text }) => {
               <div className="flex justify-between pt-4 ps-8 pe-4">
                 <div>
                   <p className={Stlyes.title}>نیاز به کمک داری؟</p>
-                  <p className={Stlyes.subTitle}>{text}</p>
+                  <p className={Stlyes.subTitle}>پشتیبانی در کنار شماست</p>
                 </div>
                 <div>
                   <ImageProvider
@@ -53,7 +55,9 @@ const Help = ({ text }) => {
                   <p className={Stlyes.text}>تلفن :</p>
                 </div>
                 <div>
-                  <p className={Stlyes.text}>021 - 25961300</p>
+                  <p style={{ direction: "ltr" }} className={Stlyes.text}>
+                    021 - 25961300
+                  </p>
                 </div>
               </div>
             </div>

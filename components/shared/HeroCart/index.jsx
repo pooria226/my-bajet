@@ -8,15 +8,17 @@ const HeroCart = ({}) => {
     <div className={Styles.wrapper}>
       <div className="md:block hidden">
         <Image
+          priority={true}
           alt=""
           height={553}
           width={1440}
-          src={"/assets/images/svgs/cart-hero.svg"}
+          src={"/assets/images/png/test.png"}
         />
       </div>
       <div className="md:hidden block">
         <div>
           <ImageProvider
+            priority={true}
             classes={"image-res"}
             aspectRatio={360 / 574}
             width={"100%"}
